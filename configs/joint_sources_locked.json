@@ -1,0 +1,38 @@
+[
+  {
+    "cancer": "breast_tnbc",
+    "collection_id": "ceef2841-5333-46ac-92ef-ccbe0c20fe55",
+    "dataset_id": "6f9de485-58cd-4342-bfc4-b3d3dd223aa8",
+    "version_id": "e94bd3cc-6271-424a-baac-12f8eb320a0e",
+    "expected_bytes": 4522982499,
+    "expected_cells": 427823,
+    "url": "https://datasets.cellxgene.cziscience.com/e94bd3cc-6271-424a-baac-12f8eb320a0e.h5ad",
+    "sha256": "d40a2b210ddf8fe0bd46118900412493c6d11d3429ffae4c311f7469f7d10da0",
+    "raw_data_location": "raw.X",
+    "doi": null
+  },
+  {
+    "cancer": "lung_luad",
+    "collection_id": "0bebef1a-4607-4584-9070-dacf89a0d635",
+    "dataset_id": "01ff5cf0-730f-4ddc-b1be-7b407211f544",
+    "version_id": "229e74ee-9b3e-4ab2-bddb-9eccbac85b48",
+    "expected_bytes": 670537560,
+    "expected_cells": 117266,
+    "url": "https://datasets.cellxgene.cziscience.com/229e74ee-9b3e-4ab2-bddb-9eccbac85b48.h5ad",
+    "sha256": "54a3590d4fe86743757cb95c2e0c60c08819446988951db713f407924ae45068",
+    "raw_data_location": "X",
+    "doi": "10.1186/s40164-025-00740-6"
+  },
+  {
+    "cancer": "kidney_ccrcc",
+    "collection_id": "1df8c90d-d299-4b2e-a54d-a5a80f36e780",
+    "dataset_id": "be39785b-67cb-4177-be19-a40ee3747e45",
+    "version_id": "f77a9049-7cbe-477d-8d3f-b417bba03147",
+    "expected_bytes": 232252366,
+    "expected_cells": 20509,
+    "url": "https://datasets.cellxgene.cziscience.com/f77a9049-7cbe-477d-8d3f-b417bba03147.h5ad",
+    "sha256": "5c1f1e2c8bae4ce1808c6da017440eba4e7d98cb3e2f551c350211e0eb02fff2",
+    "raw_data_location": "raw.X",
+    "doi": "10.1073/pnas.2103240118"
+  }
+]

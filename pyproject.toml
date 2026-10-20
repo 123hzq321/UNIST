@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unist"
+version = "0.1.0"
+description = "Uncertainty-aware neural guardrails for single-cell to spatial transcriptomics mapping."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "UNIST contributors"}
+]
+keywords = [
+  "spatial transcriptomics",
+  "single-cell",
+  "uncertainty",
+  "tumor microenvironment",
+  "deconvolution"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Scientific/Engineering :: Bio-Informatics"
+]
+dependencies = [
+  "anndata>=0.9",
+  "h5py>=3.8",
+  "numpy>=1.23",
+  "pandas>=1.5",
+  "scikit-learn>=1.2",
+  "scipy>=1.10",
+  "torch>=2.0"
+]
+
+[project.optional-dependencies]
+study = [
+  "anndata>=0.11,<0.12",
+  "requests>=2.31"
+]
+dev = [
+  "pytest>=7",
+  "ruff>=0.5",
+  "build>=1.0",
+  "twine>=4.0"
+]
+
+[project.scripts]
+unist-map = "unist.cli:main"
+unist-report = "unist.report:main"
+
+[project.urls]
+Homepage = "https://github.com/123hzq321/UNIST"
+Repository = "https://github.com/123hzq321/UNIST"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"

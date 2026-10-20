@@ -1,0 +1,60 @@
+{
+  "breast_tnbc": {
+    "column": "author_cell_type",
+    "mapping": {
+      "T": "T_NK_ILC",
+      "Tumor": "Epithelial_or_author_tumor",
+      "Endo": "Endothelial",
+      "Fibro": "Fibroblast",
+      "B": "B_Plasma",
+      "Mye": "Myeloid",
+      "Peri": "Perivascular"
+    },
+    "note": "Inspected author_cell_type: Tumor has 49,275 cells, matching the standardized abnormal-cell category. Author T includes NK cell_state subtypes. Broad compartments only; no claim of malignant-state diagnosis."
+  },
+  "lung_luad": {
+    "column": "author_cell_type_level_1",
+    "mapping": {
+      "Epithelial": "Epithelial_or_author_tumor",
+      "T.CD4": "T_NK_ILC",
+      "T.CD8": "T_NK_ILC",
+      "Mac.Infiltrated": "Myeloid",
+      "Treg": "T_NK_ILC",
+      "B": "B_Plasma",
+      "cDC": "Myeloid",
+      "Plasma": "B_Plasma",
+      "Mon": "Myeloid",
+      "Fibroblast": "Fibroblast",
+      "NK-like": "T_NK_ILC",
+      "Myeloid.Prolif": "Myeloid",
+      "Mast": "Myeloid",
+      "Endothelial": "Endothelial",
+      "Lymphoid.Prolif": null,
+      "Mac.PPARG": "Myeloid",
+      "Neutrophil": "Myeloid",
+      "Tgd": "T_NK_ILC",
+      "pDC": "Myeloid",
+      "ILC": "T_NK_ILC",
+      "Pericyte": "Perivascular"
+    },
+    "note": "Lymphoid.Prolif has no B-versus-T/NK assignment and is excluded. Mast is merged into the broad myeloid compartment to match breast annotation granularity."
+  },
+  "kidney_ccrcc": {
+    "column": "author_cell_type",
+    "mapping": {
+      "Tumor": "Epithelial_or_author_tumor",
+      "Macro": "Myeloid",
+      "Endo_PLVAP": "Endothelial",
+      "vSMC": "Perivascular",
+      "Tcell": "T_NK_ILC",
+      "Peri": "Perivascular",
+      "Endo_ACKR1": "Endothelial",
+      "Tcell_CD8": "T_NK_ILC",
+      "Plasma": "B_Plasma",
+      "Bcell": "B_Plasma",
+      "Mast": "Myeloid",
+      "Macro_MKI67": "Myeloid"
+    },
+    "note": "Preserve author tumor annotation without calling every epithelial cell malignant. No fibroblast category exists in this selected author reference."
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "source_snapshot": "Manuscript source bundle, 2026-09-27",
+  "checked_on": "2026-10-20",
+  "core_files": [
+    {
+      "file": "src/unist/__init__.py",
+      "sha256": "35558c1e58165a12c71718f6803f8b1194a65ee92f4b30e1f90f86856210d199",
+      "identical_to_archived_source": true
+    },
+    {
+      "file": "src/unist/api.py",
+      "sha256": "25c8fe1ecfb2f6d71b70422e037ad16a8e19280a3c81963b4dc62f03e21f87de",
+      "identical_to_archived_source": true
+    },
+    {
+      "file": "src/unist/cli.py",
+      "sha256": "00a1faba3e8fdc910fe1208145003becdce6cba9ee71d03d329760d6a45ce6ac",
+      "identical_to_archived_source": true
+    },
+    {
+      "file": "src/unist/data.py",
+      "sha256": "f2aca1f235047712fc6710bda6ca262eb6dab70f145a5cac362d3f0a94c08a1b",
+      "identical_to_archived_source": true
+    },
+    {
+      "file": "src/unist/models.py",
+      "sha256": "199ed5a211ad33c27393d41f8fd36833b3c14fc6302495c4472ceca0a1de58db",
+      "identical_to_archived_source": true
+    },
+    {
+      "file": "src/unist/report.py",
+      "sha256": "a9e9dd33005b6ea39453918a14959444d62e8d82632f464447bd05900b4708fe",
+      "identical_to_archived_source": true
+    },
+    {
+      "file": "src/unist/utils.py",
+      "sha256": "b1c38541d09d1d6bf77b12ae62371f9e37f8dff9bdd9546e460d9dc6f8afe275",
+      "identical_to_archived_source": true
+    },
+    {
+      "file": "src/unist/version.py",
+      "sha256": "a7833154ef22876fa19e1ec8355064aea30a04319390cb28d4b11b33a9b1de38",
+      "identical_to_archived_source": true
+    }
+  ]
+}
