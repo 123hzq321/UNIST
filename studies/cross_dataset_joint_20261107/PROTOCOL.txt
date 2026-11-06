@@ -1,0 +1,71 @@
+Frozen joint-reference cross-dataset expansion - 7 November 2026
+
+Design locked before new inference; not a preregistration or a blinded study.
+The original 14-section audit remains unchanged and is not used for tuning.
+No model fitting, feature selection, score-weight change or threshold adaptation.
+
+Sources and scope
+GSE210616: all eight locally available TNBC sections, four explicit patient IDs
+in author GEO titles. This is a local subset of the 43-record source series.
+GSE300676: all eight LUAD FFPE sections, four source cases with two sections each.
+GSE175540: all 24 RCC sections, 12 FFPE and 12 frozen. Patient identifiers are
+not verified; do not treat section names as independently verified patients.
+GSE210041: both locally available RCC sections. Names T1/T7 are specimen labels;
+patient uniqueness is not assumed for inferential statistics.
+
+All four studies were excluded from joint-reference fitting/calibration/testing.
+They were previously examined with legacy models. Cross-study patient aliases
+cannot be fully ruled out. The same three cancer categories occurred in joint
+training, so this tests new source studies and measurement platforms, not unseen
+cancer categories. Counts are sections and source studies, not independent trials.
+
+Inputs and frozen state
+Read original full 10x H5 gene IDs and counts. Do not use legacy reduced panels.
+Reuse the frozen 2,000 features, 31,738-gene denominator, three checkpoint weights,
+training centroids and synthetic-mixture calibration. Hash and replay checks are
+required. Map only frozen unambiguous gene aliases. Record missing genes and count
+mass; exclude zero-common-count spots. The existing 90% model-feature coverage
+gate separates coverage-eligible from feature-limited transport diagnostics.
+
+Endpoints
+Every section: raw and scaled score distributions, saturation, and actual
+retention under original nominal 70%, 80% and 90% thresholds. These are transport
+diagnostics, not accuracy, exact composition error or OOD-detection AUROC.
+RCC GSE175540: only explicit TLS/NO_TLS annotations are binary labels. T_AGG,
+unspecified and missing annotations are not relabelled as binary truth.
+Use B/Plasma fraction to rank author TLS structure as the primary biology
+plausibility control; summed immune fraction is secondary. Neither yields
+exact cell-composition truth. TLS is not labelled a mapping failure.
+Report TLS and non-TLS retention, class counts and B/Plasma-TLS AUROC before
+and after original-threshold and retrospective within-section 80% retention.
+One-class retained subsets yield missing AUROC, never a fabricated zero or one.
+
+Baselines
+Entropy, novelty, disagreement and the existing 0.5/0.3/0.2 fixed fusion.
+For TLS retention only, add one-minus-maximum-probability and the B/Plasma
+binary margin as composition-derived score controls. All use the same frozen
+ensemble predictions. No mature deconvolution rerun is claimed in this batch.
+Ties use fixed barcode hashes independent of labels, as in the preceding audit.
+
+Statistics
+Breast: first average sections within each of the four explicit source patients.
+Lung: first average paired sections within the four source cases.
+Within-source patient/case bootstrap intervals use 5,000 draws. They do not
+establish independence between source studies or yield clinical uncertainty.
+RCC cohorts: section-level descriptive summaries only while identities remain
+unresolved. No population confidence intervals or spot-pooled significance.
+Stratify FFPE/frozen preparations. Do not pool unlike biological endpoints or
+declare general accuracy based on unlabeled cohorts. No superiority hypothesis
+is added after observing a favorable section.
+
+Excluded source
+GSE283052 CRC matrices were previously assigned a generic reference feature
+list based on matching row counts. Original gene-row correspondence has not
+been independently verified. Exclude them from this batch rather than claim
+additional reliable external validation. No new CRC rescue is claimed.
+
+Storage and reporting
+Inputs remain read-only. D: reports a filesystem warning during the local run;
+small predictions and reports use a separate recovery workspace. No raw dataset
+copies or new large downloads are needed. Publish code and aggregate tables only.
+Keep all failures and negative outcomes. Original submission files are untouched.

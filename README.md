@@ -17,8 +17,19 @@ These are retrospective histology-proxy analyses, not exact cell-fraction truth
 or clinical validation. Raw data and fitted weights are not included.
 
 The [next-cohort qualification audit](studies/spatial_calibration_candidate_audit_20261107/REPORT.txt)
-checks 24 additional RCC sections and records unresolved patient identities and
-annotation schemas. It is not counted as completed model validation.
+checked 24 additional RCC sections and recorded unresolved patient identities and
+annotation schemas. It was a pre-inference inspection, not a separate model test.
+
+The [cross-dataset expansion](studies/cross_dataset_joint_20261107/REPORT.txt)
+has now tested 42 additional sections / 125,430 spots from four source studies,
+including those 24 RCC sections. The combined frozen-model audit covers 56
+sections / 165,287 spots from six sources, not 56 independent patient cohorts.
+Twenty of the new sections pass the feature-coverage gate; 22 FFPE sections are
+feature-limited diagnostics. Frozen thresholds lose nominal coverage, and fixed
+fusion can preferentially reject author-annotated TLS. These negative findings
+do not establish mapping accuracy or a successful biological rescue. No model
+weights or thresholds were adapted to these data. See the metadata correction
+record for verified identities and preparation of the two GSE210041 samples.
 
 The package is designed for a specific question: when a single-cell reference is mapped onto a spatial query, can the model flag regions or cohorts where the mapping should not be over-interpreted?
 

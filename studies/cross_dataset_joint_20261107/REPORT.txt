@@ -1,0 +1,113 @@
+FROZEN CROSS-DATASET JOINT-MODEL AUDIT - 7 NOVEMBER 2026
+
+Execution and scope
+42/42 additional sections; four source studies; 125,430 spatial spots; no errors.
+The previous audit contained 14 sections / 39,857 spots / two other sources.
+Together: 56 sections, 165,287 spots and six source studies for this frozen
+joint-model audit. This is not the total historical project benchmark count.
+Twenty new sections pass the existing 90% feature-coverage gate; 22 are
+feature-limited diagnostics. Including the previous audit: 26 eligible sections.
+These are retrospective external source-study tests, not new blinded cohorts.
+The same cancer categories were used in training. This is not an unseen-cancer
+experiment. Cross-study patient aliases have not been exhaustively ruled out.
+
+No retraining, recalibration, threshold selection or score-weight changes were
+performed. All three checkpoint hashes and all 14 previous prediction files
+were unchanged. Replay of 32 original test cells passed (max delta 4.31e-9).
+
+New source inventory
+   cohort cancer preparation  sections  spots  analysis_units                                        unit_identity_source  selected_feature_fraction  coverage_eligible  novelty_saturated_fraction_mean  common_count_mass_fraction_min
+GSE175540  renal        FFPE        12  53444              12                    section_only_patient_identity_unresolved                     0.8560                  0                           1.0000                          0.9951
+GSE175540  renal      frozen        12  20776              12                    section_only_patient_identity_unresolved                     0.9995                 12                           0.6055                          0.9880
+GSE210041  renal        FFPE         2   7079               2 GEO_explicit_patient_characteristic_two_patient_descriptive                     0.8560                  0                           1.0000                          0.9958
+GSE210616 breast      frozen         8  10504               4                                  GEO_explicit_patient_title                     0.9995                  8                           0.1491                          0.9934
+GSE300676   lung        FFPE         8  33627               4                 GEO_case_title_and_four_case_overall_design                     0.8560                  0                           1.0000                          0.9976
+
+Patient accounting
+GSE210616: four author-named TNBC patients, two sections each, eight local
+sections out of a 43-record source series. This is not the full source series.
+GSE300676: four LUAD source cases, two sections each. The CRC filename prefix
+does not denote colorectal cancer; cancer type comes from GEO source metadata.
+GSE210041: two author-named RCC patients, one FFPE section each. Metadata were
+corrected after the run; see METADATA_CORRECTION.txt. No treatment comparison.
+GSE175540: patient identities remain unresolved. Twenty-four section identifiers
+must not be promoted to 24 independent patients. TLS comparisons are descriptive.
+
+Coverage transport at the ORIGINAL nominal 80% threshold
+(patient/case-balanced for breast and lung; section means for RCC)
+score                  entropy_only  novelty_only  disagreement_only  fixed_fusion
+cohort    preparation                                                             
+GSE175540 FFPE               25.03%         0.00%              5.72%         1.91%
+          frozen             57.60%        10.45%             27.90%        18.98%
+GSE210041 FFPE               36.12%         0.00%             12.03%         3.52%
+GSE210616 frozen             75.82%        73.27%             50.63%        65.24%
+GSE300676 FFPE               20.56%         0.00%              3.30%         1.38%
+
+Breast and lung confidence intervals first average sections within the four
+source patients/cases, then bootstrap those four units with 5,000 draws. With
+only four units, these intervals are fragile and do not establish independence
+between cohorts. RCC summaries have no population confidence interval.
+
+Interpretation
+The frozen nominal coverage does not transport reliably. Lower retention is not
+proof of better error detection: unlabeled queries have no exact mapping-error
+truth. All 22 FFPE sections have novelty clipped at one across all spots, so the
+clipped novelty score cannot rank their regions. These sections also retain
+only 85.60% of the model features. Gene availability, platform, source and biology
+are confounded; this is stratified transfer testing, not a causal factorial
+estimate of a platform effect. Near-complete observed count-mass recovery does
+not restore the unmeasured features.
+
+TLS structure preservation control
+Twenty sections have explicit binary annotations; only 17 contain both TLS and
+non-TLS labels (7 frozen, 10 FFPE). Two have only non-TLS labels and one only TLS.
+No AUC is assigned to a one-class subset. Three other annotation files contain
+T aggregates or nonbinary labels and are excluded; one section lacks annotation.
+TLS is a biological structure label, NOT a mapping-error label or exact cell
+proportion. B/Plasma-TLS association is a plausibility control, not accuracy truth.
+
+At matched test-set 80% retention, the following means use the SAME two-class
+sections within each preparation. This is a retrospective ranking diagnostic,
+not a deployable frozen-threshold policy or an independent downstream rescue.
+preparation             score  n_both_class_sections  mean_tls_retention  mean_non_tls_retention  mean_tls_minus_non_tls_retention  mean_auc_change_among_valid_pairs
+       FFPE disagreement_only                     10              0.8251                  0.7996                            0.0255                             0.0004
+       FFPE      entropy_only                     10              0.4354                  0.8135                           -0.3781                            -0.0581
+       FFPE      fixed_fusion                     10              0.4845                  0.8124                           -0.3279                            -0.0391
+       FFPE      novelty_only                     10              0.8158                  0.8000                            0.0158                            -0.0054
+     frozen disagreement_only                      7              0.8220                  0.8205                            0.0015                             0.0074
+     frozen      entropy_only                      7              0.5224                  0.8096                           -0.2872                             0.0084
+     frozen      fixed_fusion                      7              0.6535                  0.8289                           -0.1754                             0.0081
+     frozen      novelty_only                      7              0.8282                  0.8238                            0.0044                             0.0012
+
+The fixed fusion preferentially removes TLS in both preparation groups. An
+AUROC computed after removing a biological class is not sufficient evidence
+of benefit. Report class-specific retention beside every selected-subset AUC.
+For FFPE, novelty is constant after clipping, so matched 80% selection uses only
+label-blind barcode-hash tie breaking; its near-neutral TLS retention is not
+evidence that novelty distinguishes reliable and unreliable regions.
+Composition-based scores are reported as controls; they are not uncertainty
+truth. No universal superiority over entropy, novelty or disagreement is shown.
+
+Exclusions and limits
+GSE283052 CRC remains excluded because its original gene-row order has not been
+verified. A generic feature list with the same length is not a valid substitute.
+No new CRC pathology rescue, clinical endpoint, exact fraction ground truth,
+independent clinical validation or mature-mapper comparison was completed here.
+The original paper and submission release have not been modified.
+
+Next scientific gate
+Before an accuracy or rescue claim: obtain verified source patient linkage and
+independent annotation; define a separate spatial calibration cohort; lock
+feature support and policies there; evaluate on untouched source-held-out test
+cohorts with patient-level endpoints and class-specific retention. Any future
+adaptation using these 42 sections must designate them development data and
+must not rebrand the present results as independent validation of that adaptation.
+
+Sources
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE210616
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE175540
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE210041
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE300676
+Source metadata were read from NCBI GEO FTP SOFT files; their URLs and SHA256
+values are recorded in run_provenance_public.json. No source clinical tables,
+per-spot predictions, model weights or raw data are included in the public export.

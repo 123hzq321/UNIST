@@ -1,0 +1,65 @@
+{
+  "files": [
+    {
+      "name": "REPORT.txt",
+      "sha256": "251a82de071d8cdd3a195e568ca291bb05479ced02673e227fd621e816bdd082"
+    },
+    {
+      "name": "PROTOCOL.txt",
+      "sha256": "ced92874935245140f30690deb530e7a8920acb78614eb33f6b31dd2632e7d9d"
+    },
+    {
+      "name": "sample_inventory.csv",
+      "sha256": "6ba39c5281c1758b31a6f78197576550d0141f0c5985d7e346bb8b5d393c4e19"
+    },
+    {
+      "name": "cohort_inventory.csv",
+      "sha256": "1d7edbc783ca390898dd1023d021583bbf223f9d4dfdfe7342ad8efc83d74aa8"
+    },
+    {
+      "name": "section_transport_metrics.csv",
+      "sha256": "7724d7f5c44d6b1124127efe0ceb6600f8c092283b25314a270ff3bea241c25a"
+    },
+    {
+      "name": "unit_coverage_metrics.csv",
+      "sha256": "1b8db914ea08d07109981160beedfa2427d8ec59e5b0526affd3ec822a1647c3"
+    },
+    {
+      "name": "cohort_coverage_summary.csv",
+      "sha256": "91a85d9e5d1c20105b03126a6f60ad5a7f40d0a726ee21d88d16064b33296d56"
+    },
+    {
+      "name": "tls_structure_metrics.csv",
+      "sha256": "ef22f4f9553cce38a647be8b2f76192cbb3f66ef9e8f99891f70489eed69767c"
+    },
+    {
+      "name": "tls_structure_summary.csv",
+      "sha256": "e30e16833ede3de88ba2a22acc57a9112e0b936f3f8eaef2672bd2b5e6b21987"
+    },
+    {
+      "name": "COMPLETE.json",
+      "sha256": "26ce4829806c16406fe6f98c62de780a2997e7b6d00a1de5d757e98d12f155c5"
+    },
+    {
+      "name": "original_prediction_replay.json",
+      "sha256": "f61918d9ae423b0e880446608dd3901cc5300ce3cfc2b6c9c2b8313136b1a093"
+    },
+    {
+      "name": "run_provenance_public.json",
+      "sha256": "82a6a4840043f918d63a07c6acbedb0847feb3b6aa7a48ccb202ef4a2dd16ea3"
+    },
+    {
+      "name": "cross_dataset_transport.png",
+      "sha256": "547e4427b87bc6c8a549226e8b040ccbfa4f969c64aa04742be2089af3b1a10f"
+    },
+    {
+      "name": "cross_dataset_transport.svg",
+      "sha256": "d0947190fcde36cade4285e338cb09f792fbdcae3ff94f70e70ff8af44e607fc"
+    },
+    {
+      "name": "metadata_correction.json",
+      "sha256": "73f22fdd8ca531da74a746d4b13c7597ac298d2157b6dbe1651bc11e4675865b"
+    }
+  ],
+  "raw_data_or_per_spot_predictions_or_weights_included": false
+}

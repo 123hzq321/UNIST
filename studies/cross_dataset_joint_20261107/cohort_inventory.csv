@@ -1,0 +1,6 @@
+cohort,cancer,preparation,sections,spots,analysis_units,unit_identity_source,selected_feature_fraction,coverage_eligible,novelty_saturated_fraction_mean,common_count_mass_fraction_min
+GSE175540,renal,FFPE,12,53444,12,section_only_patient_identity_unresolved,0.856,0,1.0,0.9950580004030428
+GSE175540,renal,frozen,12,20776,12,section_only_patient_identity_unresolved,0.9995,12,0.6055370505321643,0.9879543928787144
+GSE210041,renal,FFPE,2,7079,2,GEO_explicit_patient_characteristic_two_patient_descriptive,0.856,0,1.0,0.9957882591612012
+GSE210616,breast,frozen,8,10504,4,GEO_explicit_patient_title,0.9995,8,0.14906206286024148,0.9934167880850924
+GSE300676,lung,FFPE,8,33627,4,GEO_case_title_and_four_case_overall_design,0.856,0,1.0,0.9976141347508666

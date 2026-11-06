@@ -1,0 +1,77 @@
+{
+  "kind": "post_run_source_metadata_correction_no_prediction_or_threshold_change",
+  "source": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE210nnn/GSE210041/soft/GSE210041_family.soft.gz",
+  "source_sha256": "4b2e804b2d8ee5de119f3a10a41fc387cdc9babafaeae9237de7eeb933a86d83",
+  "corrections": {
+    "GSM6415705": {
+      "preparation": "FFPE",
+      "analysis_unit": "patient_1",
+      "unit_identity_source": "GEO_explicit_patient_characteristic_two_patient_descriptive"
+    },
+    "GSM6415706": {
+      "preparation": "FFPE",
+      "analysis_unit": "patient_7",
+      "unit_identity_source": "GEO_explicit_patient_characteristic_two_patient_descriptive"
+    }
+  },
+  "reason": "Original inventory incorrectly inferred fresh frozen and overlooked explicit patient characteristics.",
+  "statistics": "Two patients remain descriptive; no new population confidence interval or treatment contrast.",
+  "original_run_lock_and_per_sample_audits_preserved": true,
+  "original_table_hashes": {
+    "sample_inventory.csv": "b2b966ca27af3a1462f55b3f9e53e302f7db9f1a738273a88efb55a5d519511a",
+    "section_transport_metrics.csv": "87928303ff79bc09afac7e32ed0c6ad9ade4fafc3ab87eeadd76467b7795718b",
+    "unit_coverage_metrics.csv": "035d75b33043351a595aaf67c09e1929f65753bb7ce171b08d1ec38f35aba8f0",
+    "cohort_coverage_summary.csv": "d238b726dd085facce32726f74e9b81ecd56666754902ca4f1a163e6f445cddc"
+  },
+  "predictions_unchanged": true,
+  "prediction_hashes": {
+    "GSM5924030": "5d19f7e54e8e49fbba4643fdf82886fdd21a2cce5f7344b198448fb0d0b3a3b2",
+    "GSM5924031": "b8ea6eb839a812f84a05351bbcce2cf52a4c9f30987a279733dae8b2de7f53d8",
+    "GSM5924032": "f248f087aeab8691cd228792433f3ec2a5c55cfb5f6c79a3be1f6fda411b2a0d",
+    "GSM5924033": "0362d77834d0f833e7699066acdf31d930cce7a8d9bbe44ac2048ec579b47204",
+    "GSM5924034": "2a0aaf36f26f0502e8500fc94e013d919eee7fd30ee811e4b5609267a838a4fd",
+    "GSM5924035": "71e77a0f7a68c012a64c9e200fd9c3b4caa4fdb05a4a8de3fee76f81745a8962",
+    "GSM5924036": "e56b8031853d200766e07496a4a09c15e7fd78083bee8d1311f03fb319a88aaf",
+    "GSM5924037": "32c3bff22014258e77eeab64be9033d1fefa054d77dcc997294d870e837a6558",
+    "GSM5924038": "3c0d307498c26a240d250c3f4e0eb04e75b8b1ec00452c4642b52c3029e36672",
+    "GSM5924039": "4152968fa726a71fecc9211b26d1f038ec75794cd6c5136de7c0e4356d4297ce",
+    "GSM5924040": "85104f8e3bb5ab328da168cbd397dbc4070fa1ae1838d50f49fd3dadad5a9de0",
+    "GSM5924041": "a368b012331791a341aa08372e5411803de1e5483dfd5153ce2a8a259db3dece",
+    "GSM5924042": "803c86f416fa94ec3e57a64fddf7339b3970519603ac84b3668bd97dafb963bb",
+    "GSM5924043": "b436e516f5f3d8947b18d8934301473b0b0eb68c09675120b16690711592c2e3",
+    "GSM5924044": "195f026bb89ef05a75aa0cb8ce4f5578ad83b7dcad0c73481a040387fa30ec73",
+    "GSM5924045": "08ac0492e5c3466595044e8dac03ecdbf53dca8662d991fc5599b66b84b2822e",
+    "GSM5924046": "b691c35bdc1100a65b22bdae6c4adeff2511d320433bee1767707e76671cd91f",
+    "GSM5924047": "3ebe93c0efd02dc2d0b30cbec0beb9986b27b4ca7517a708260d8e8147dfe7a1",
+    "GSM5924048": "381d545824280a0998fa30a407079a2bb122834dacab423b3e5dbf5135c3a0f5",
+    "GSM5924049": "36b874c95646127dc44c31e3e37088f112e45b34a9d46bce0adf118834ec2a96",
+    "GSM5924050": "ccfeb879b1d1e96184c3576b4c363efe59fc2a75b9fcaeb10fcab6ac4b518648",
+    "GSM5924051": "d0db81d38181ab013dff98163c70ed091c12df4c3d170ae37757cd0bdbaa93be",
+    "GSM5924052": "89adb02c79be3881e6b8b04d1b75d620e2b881ae65297902d957dba9c7cb7e70",
+    "GSM5924053": "4fdf08524bf577a470dad5974f146726d30d64796d2aca851a16822bb43f0d23",
+    "GSM6415705": "02f883ce90f3fffdfde9e0860c71a2a3661ff9f77021471729701b8e7e452c07",
+    "GSM6415706": "5d49dac4e5ebc20c864ed93c4194cde753ba5a56b468590958d8e9c5e4c1e1ef",
+    "GSM6433585": "07dbe6cefe028fa119a43c51e55a223a39d1493f480f9775f4d73725e4271786",
+    "GSM6433586": "e07bcd9f8a077bb17f3d78bfa3a8d7b1cf0227d21060bc400fef00ceb8921b8a",
+    "GSM6433593": "24a9c006572672e2c56f321998ffca7061ed282d265b0ba0460c37230d5e02ba",
+    "GSM6433594": "6aebe54fa9eaac0aca0051ca5bc69f296e4215fb60fdf979e32c6ce5361c4a7b",
+    "GSM6433599": "81ac49ab3499626cc039bc8d83e7fda9435afcabee02b73ca0cf44156cf382e7",
+    "GSM6433600": "30ed12096694fb64ba35b95dd6e8ac1c972a38a818dbe1b38511e437ea3aa938",
+    "GSM6433611": "f36da3f60a3982ca2f693f1d6cd9fe82a26e3d5d3404892b20da0d2d62df75c6",
+    "GSM6433612": "0b3dd1b7d48b7ba71c60078bd4d4e9f1a234d74218fb966c80f8174c129b37aa",
+    "GSM9066288": "58745c92a679cf36e8242c9903fe2be570a41ec5024a3971960a3af834e911d2",
+    "GSM9066289": "8f4b2dbf9a5e8111a1fc15335c05cf14f05f7ab087d139ac90427828acce7e1b",
+    "GSM9066290": "9a44c29f3978e82612f67dc33c7a4e31bdbe0b5db708aef436ced6bee78e8d90",
+    "GSM9066291": "25f26d643cc55f4ec2af23ba751802c3e83d76d71c1f530fb8a5a528036e36cb",
+    "GSM9066292": "eefbfe63ee7432b59f24ae89ede318e545d7c1f657d9701f70cd4c4a913187d1",
+    "GSM9066293": "a5e1f802dd31bde1e5621c558a658575f60acc1b032bc0a62003a9d85d38e03d",
+    "GSM9066294": "7f7fcdce849dc3b857665fbbd18aaf3b0e7d5b6161c96abfc54f99cc7ceb56f1",
+    "GSM9066295": "1a5fdad16b1699d2abe3b98c8a9d246703fe95b86c085dde910d610b24107bd4"
+  },
+  "corrected_table_hashes": {
+    "sample_inventory.csv": "6ba39c5281c1758b31a6f78197576550d0141f0c5985d7e346bb8b5d393c4e19",
+    "section_transport_metrics.csv": "7724d7f5c44d6b1124127efe0ceb6600f8c092283b25314a270ff3bea241c25a",
+    "unit_coverage_metrics.csv": "1b8db914ea08d07109981160beedfa2427d8ec59e5b0526affd3ec822a1647c3",
+    "cohort_coverage_summary.csv": "91a85d9e5d1c20105b03126a6f60ad5a7f40d0a726ee21d88d16064b33296d56"
+  }
+}

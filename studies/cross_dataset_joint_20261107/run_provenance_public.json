@@ -1,0 +1,173 @@
+{
+  "started_utc": "2026-11-06T23:30:25.460204+00:00",
+  "script_sha256": "a4be9d11db566b2918b1af5e74007c4568bb3e75fd17847d8682fe6d51e0e09a",
+  "protocol_sha256": "ced92874935245140f30690deb530e7a8920acb78614eb33f6b31dd2632e7d9d",
+  "sources": {
+    "GSE175540": {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE175nnn/GSE175540/soft/GSE175540_family.soft.gz",
+      "sha256": "82cb69e1e856c6007e7ff6728a541ce26a34fbedf5688c431b20fad76dc352a3",
+      "bytes": 3976,
+      "overall_design": "Spatial transcriptomics of fresh frozen ccRCC human tumors\n*** Raw data has not been submitted at this time due to patient privacy concerns ***"
+    },
+    "GSE210616": {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE210nnn/GSE210616/soft/GSE210616_family.soft.gz",
+      "sha256": "21e52c3ac750ba6f9265694b6c6b2ce5e9361436872a266fbaa6b4aabca3ec5c",
+      "bytes": 5101,
+      "overall_design": "28 tissue sections representing 14 primary TNBC tumors were subject to spatial transcriptomics using the 10x Genomics Visium platform, followed by high throughput sequencing. Raw data not submitted due to patient privacy concerns."
+    },
+    "GSE210041": {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE210nnn/GSE210041/soft/GSE210041_family.soft.gz",
+      "sha256": "4b2e804b2d8ee5de119f3a10a41fc387cdc9babafaeae9237de7eeb933a86d83",
+      "bytes": 3267,
+      "overall_design": "Two tumoral samples from patients presenting clear-cell Renal Cell Carcinoma were analyzed by Spatial transcriptomics."
+    },
+    "GSE300676": {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE300nnn/GSE300676/soft/GSE300676_family.soft.gz",
+      "sha256": "ff60bd9600610cb4d1e5d1803d5093bc7bdea3c40628528668e5c4a03f1023f9",
+      "bytes": 2775,
+      "overall_design": "We studied four cases of surgically resected lung adenocarcinoma (LUAD).  Eight tissue FFPE sections (n = 2 each from the four LUAD samples) that included lepidic, filigree and mPAP elements were analyzed using Visium Spatial Gene Expression Profiling System. RNA transcriptome data were obtained from individual spots corresponding to each histological element. The mRNA levels in the lepidic, filigree, and mPAP components were then compared and analyzed."
+    }
+  },
+  "frozen_calibration": {
+    "scale_fit": "calibration donors only, equal-source/equal-donor weights",
+    "score": "0.5 normalized entropy + 0.3 rescaled novelty + 0.2 rescaled ensemble variance",
+    "interpretation": "risk index, not a calibrated probability or OOD guarantee",
+    "scales": {
+      "novelty": [
+        0.2024353146553048,
+        0.46019014716148565
+      ],
+      "disagreement": [
+        2.1369706134854185e-13,
+        0.0007585645071231073
+      ]
+    },
+    "thresholds": {
+      "entropy_only": {
+        "0.7": 0.39860550685128876,
+        "0.8": 0.5034907172837528,
+        "0.9": 0.5524912955058011
+      },
+      "novelty_only": {
+        "0.7": 0.6409181952476534,
+        "0.8": 0.718491554260254,
+        "0.9": 0.843837678432467
+      },
+      "disagreement_only": {
+        "0.7": 0.23857404291633297,
+        "0.8": 0.3410795927047764,
+        "0.9": 0.5903358221054695
+      },
+      "fixed_fusion": {
+        "0.7": 0.42484587752967434,
+        "0.8": 0.4711382935269556,
+        "0.9": 0.5303550076095027
+      },
+      "single_mlp_entropy": {
+        "0.7": 0.38065091347422847,
+        "0.8": 0.49825693257325165,
+        "0.9": 0.5514927092636068
+      }
+    }
+  },
+  "label_use": "no tuning; TLS is structure control, no exact error truth",
+  "no_training_or_threshold_refit": true,
+  "source_studies_held_out_from_joint_fit": true,
+  "cross_study_patient_aliases": "not definitively resolved",
+  "not_a_new_blinded_cohort": true,
+  "expected_sections": 42,
+  "model_integrity": [
+    {
+      "file": "ensemble_member_0.pt",
+      "sha256": "79f232f6f23a4f9a293e2276e9dc65d953e4431617e67fc4d05aa7ffa9fab218"
+    },
+    {
+      "file": "ensemble_member_1.pt",
+      "sha256": "3b8d622cae1edb2b9a3d4580a9611d15751652892bded0615060d60422fd7e03"
+    },
+    {
+      "file": "ensemble_member_2.pt",
+      "sha256": "9853d6f3d2ae3e3601698b2e76a03838c520ce623431a0094f323348b072a3fd"
+    },
+    {
+      "file": "selected_genes.json",
+      "sha256": "28501188843315de55ef7cca0c71ba238aa18713c45f298063fba5e165044b62"
+    },
+    {
+      "file": "common_genes.json",
+      "sha256": "03b597c8d5dbf69c4e4af80267f94f44fc513b3f599c3ac8a5a9066616eac4c9"
+    },
+    {
+      "file": "READY.json",
+      "sha256": "fd45e70dad792ec94ba765d8d4efee09374b027d397dab46ab793f9410c33359"
+    },
+    {
+      "file": "train_class_centroids_log1p.npy",
+      "sha256": "07368ca1eae5e995103d2ed316273ffc005389ddec57b32303b274712dde7d1b"
+    },
+    {
+      "file": "synthetic_within_donor_mixtures_frozen_calibration.json",
+      "sha256": "feba7aacdfd5a36c5b070812ce6fb2b2b77843ef71694c26798598cfefc2bd31"
+    }
+  ],
+  "protected_previous_predictions": [
+    {
+      "sample_id": "1142243F",
+      "sha256": "621b864f12af536c71df3f8dd6ee5e062f1f82f77c0292859375f3a57d998e71"
+    },
+    {
+      "sample_id": "1160920F",
+      "sha256": "daf03c67ce502a195179e978d1c422e9a5ab1ee4b188599a4eadfb50979ea9a0"
+    },
+    {
+      "sample_id": "CID4290",
+      "sha256": "127948a1f1c8c65cffa1155ed04515fd899934a956bc619d4a0f19b0acd9b92e"
+    },
+    {
+      "sample_id": "CID4465",
+      "sha256": "8c4d78dd6e385a15e53c19df2f3f733543c6b2e238847f36d4896f385705c053"
+    },
+    {
+      "sample_id": "CID44971",
+      "sha256": "383033d75d2ea0045474be3800c195d228844a0e451e209a02da3e473cecd4d7"
+    },
+    {
+      "sample_id": "CID4535",
+      "sha256": "8cc6a957c5ca6628b07857483a09511cf9ecd14635ef4cd0eea77a600d25cb9c"
+    },
+    {
+      "sample_id": "KC1",
+      "sha256": "f0b9a1f49131e2c701095898b514adbee005db24d93895ff99a89c8e9ecb649a"
+    },
+    {
+      "sample_id": "KC2",
+      "sha256": "e426bfa3f0cf1fb58b9a61e0af27ed5db36046e9d9e652b707657ae4db4d0792"
+    },
+    {
+      "sample_id": "KC3",
+      "sha256": "b568b011bb7d257dbe3fc5a62d67ad209c88deab3d3ab84f053a0bac3077f73e"
+    },
+    {
+      "sample_id": "LC1",
+      "sha256": "6c606b56556ff670d58fba58d77df3ee3a0ed2941ad8ec6dcb92209fa52dd842"
+    },
+    {
+      "sample_id": "LC2",
+      "sha256": "3cbc9544804f5f42f0776a74b71fbbaf762288c8db7fa9c2220a671bc994441b"
+    },
+    {
+      "sample_id": "LC3",
+      "sha256": "45acf907bfe2b1e5a930d8ec65a989a4d8cc32ad40ac20652c448c24b899e621"
+    },
+    {
+      "sample_id": "LC4",
+      "sha256": "18072d6dd27da66c025e83f25e9a0801c9abc81f2d562144dbc16eb3d4a23fe4"
+    },
+    {
+      "sample_id": "LC5",
+      "sha256": "2e4e438cf4f773b92ec859250b840178b54cc98705132b68ea09ea7a8ad4c262"
+    }
+  ],
+  "public_inference_script_sha256_after_metadata_correction": "6bb32a397df694777f340384d7520e637ba8371677877a1914678468843c76d8",
+  "historical_protocol_note": "Original protocol retained verbatim; metadata correction supersedes the GSE210041 identity assumption."
+}
