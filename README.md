@@ -16,6 +16,10 @@ Negative outcomes, section-level statistics and reproduction scripts are include
 These are retrospective histology-proxy analyses, not exact cell-fraction truth
 or clinical validation. Raw data and fitted weights are not included.
 
+The [next-cohort qualification audit](studies/spatial_calibration_candidate_audit_20261107/REPORT.txt)
+checks 24 additional RCC sections and records unresolved patient identities and
+annotation schemas. It is not counted as completed model validation.
+
 The package is designed for a specific question: when a single-cell reference is mapped onto a spatial query, can the model flag regions or cohorts where the mapping should not be over-interpreted?
 
 UNIST is not intended to replace mature deconvolution tools such as RCTD, cell2location, Tangram or stereoscope. It provides a complementary uncertainty layer for cross-patient, cross-platform and cross-cancer spatial tumour microenvironment interpretation.
