@@ -4,6 +4,18 @@ UNIST is a research package for auditing uncertainty in single-cell reference ma
 
 This repository contains the UNIST 0.1.0 package and a separate donor-disjoint joint-reference experiment. See [reproducibility scope](docs/reproducibility.md) before interpreting the results. Uncertainty is endpoint-dependent, and fixed fusion is not consistently superior to individual scores.
 
+## Frozen Joint-Model Spatial Audit
+
+The [7 November 2026 validation study](studies/frozen_joint_spatial_20261107/README.md)
+reports real spatial testing of the frozen joint-reference model: 14 sections,
+39,857 spots, two source cohorts. Six breast sections passed the model-feature
+coverage gate; eight kidney/lung FFPE sections are transport diagnostics only.
+Fixed fusion did not improve the breast pathology endpoint over the simple
+scores, and the original rejection thresholds did not preserve nominal coverage.
+Negative outcomes, section-level statistics and reproduction scripts are included.
+These are retrospective histology-proxy analyses, not exact cell-fraction truth
+or clinical validation. Raw data and fitted weights are not included.
+
 The package is designed for a specific question: when a single-cell reference is mapped onto a spatial query, can the model flag regions or cohorts where the mapping should not be over-interpreted?
 
 UNIST is not intended to replace mature deconvolution tools such as RCTD, cell2location, Tangram or stereoscope. It provides a complementary uncertainty layer for cross-patient, cross-platform and cross-cancer spatial tumour microenvironment interpretation.

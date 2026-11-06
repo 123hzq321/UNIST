@@ -1,0 +1,10 @@
+{
+  "model_and_calibration_hashes_rechecked": true,
+  "runner_matches_locked_hash": true,
+  "all_prediction_probabilities_finite_and_sum_to_one": true,
+  "section_counts_reconciled": true,
+  "unit_tests_passed": 9,
+  "no_claim_of_new_independent_patient_ids": true,
+  "no_new_model_training": true,
+  "no_manuscript_changes": true
+}

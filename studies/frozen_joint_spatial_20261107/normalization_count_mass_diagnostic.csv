@@ -1,0 +1,15 @@
+cohort,sample_id,n_spots,common_gene_count_mass_fraction,unresolved_symbol_count_mass_fraction,spot_count_mass_fraction_p05,spot_count_mass_fraction_median,spot_count_mass_fraction_p95,limitation
+breast_wu2021,1142243F,4784,0.9920275211334229,0.0073986114002764225,0.9872902035713196,0.9920883774757385,0.9946467876434326,Only observed counts assessed; missing unmeasured transcripts remain unknowable.
+breast_wu2021,1160920F,4895,0.9941485524177551,0.005572122987359762,0.9920276403427124,0.9943636655807495,0.9966812133789062,Only observed counts assessed; missing unmeasured transcripts remain unknowable.
+breast_wu2021,CID4290,2432,0.9982412457466125,0.0014654569095000625,0.9951934814453125,0.9982714056968689,0.999079167842865,Only observed counts assessed; missing unmeasured transcripts remain unknowable.
+breast_wu2021,CID4465,1211,0.9981518387794495,0.0015216282336041331,0.9938138723373413,0.9983684420585632,0.9991357326507568,Only observed counts assessed; missing unmeasured transcripts remain unknowable.
+breast_wu2021,CID44971,1162,0.9973165392875671,0.0022502292413264513,0.9897302389144897,0.9976651668548584,0.998846173286438,Only observed counts assessed; missing unmeasured transcripts remain unknowable.
+breast_wu2021,CID4535,1127,0.9977704286575317,0.0015992297558113933,0.9959166049957275,0.9979652762413025,0.9987915754318237,Only observed counts assessed; missing unmeasured transcripts remain unknowable.
+tls_usz2025,KC1,3690,0.9983018636703491,0.0,0.9947076439857483,0.9984984993934631,1.0,Only observed counts assessed; missing unmeasured transcripts remain unknowable.
+tls_usz2025,KC2,1870,0.9950804710388184,0.0,0.9892067909240723,0.9952418804168701,1.0,Only observed counts assessed; missing unmeasured transcripts remain unknowable.
+tls_usz2025,KC3,2654,0.9988359808921814,0.0,0.9976384043693542,0.9989246129989624,1.0,Only observed counts assessed; missing unmeasured transcripts remain unknowable.
+tls_usz2025,LC1,4361,0.9956549406051636,0.0,0.988811194896698,0.9959083199501038,1.0,Only observed counts assessed; missing unmeasured transcripts remain unknowable.
+tls_usz2025,LC2,2935,0.9985125660896301,0.0,0.9975064992904663,0.9985268115997314,0.9993658065795898,Only observed counts assessed; missing unmeasured transcripts remain unknowable.
+tls_usz2025,LC3,3780,0.9984896779060364,0.0,0.9945051074028015,0.9984022974967957,1.0,Only observed counts assessed; missing unmeasured transcripts remain unknowable.
+tls_usz2025,LC4,2939,0.9981496930122375,0.0,0.9909583926200867,0.9983922839164734,1.0,Only observed counts assessed; missing unmeasured transcripts remain unknowable.
+tls_usz2025,LC5,2017,0.9990077018737793,0.0,0.9976975917816162,0.9990326166152954,1.0,Only observed counts assessed; missing unmeasured transcripts remain unknowable.
