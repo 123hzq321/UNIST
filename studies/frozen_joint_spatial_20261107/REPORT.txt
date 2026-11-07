@@ -1,0 +1,112 @@
+UNIST frozen joint-reference spatial validation - 7 November 2026
+Analysis: 20261107-v2. Results include negative outcomes. No manuscript edits or new submission.
+
+WHAT ACTUALLY RAN
+All 14 sections completed, 39,857 spots. No failed sections.
+Six Wu breast sections (15,611 spots) met the predeclared feature-coverage gate.
+Three kidney and five lung TLS sections (24,246 spots) were diagnostic only:
+1,711/2,000 fixed features were available (85.55%, below the 90% gate).
+Breast retained 1,998/2,000 fixed features (99.90%). This is technical eligibility,
+not proof of adequate expression-domain matching or independent patient identities.
+
+FROZEN MODEL AND TECHNICAL CHECKS
+All three archived checkpoint hashes matched before and after the run.
+Features, centroids, weights, score scales and rejection thresholds were not refitted.
+32-cell original prediction replay: maximum probability difference 4.31e-09.
+Read full matrices, resolve unambiguous training-reference gene aliases, use the
+original common-gene CP10K rule, and join author labels by exact barcode.
+The first attempt failed on plain-text files named .gz; those failures and the
+old runner are retained separately. The v2 rerun corrected format handling only.
+
+POST-RUN NORMALIZATION DIAGNOSTIC (NO PREDICTIONS CHANGED)
+The fixed common-gene denominator accounts for 99.20% to
+99.90% of observed counts across the 14 sections.
+Thus gene-name resolution did not discard a large observed count mass. This does
+not recover unmeasured panel genes or establish biological calibration transfer.
+
+PRIMARY COVERAGE-ELIGIBLE BREAST ENDPOINT
+AUROC ranks epithelial-present versus non-epithelial author pathology.
+It is NOT exact cell-fraction error, cancer diagnosis accuracy or OOD AUROC.
+Unfiltered equal-section mean AUROC: 0.7273.
+At retrospective matched 80% within-section retention:
+  Entropy                    0.7257 [0.6097, 0.8289], n=6 sections
+  Novelty                    0.7415 [0.6573, 0.8159], n=6 sections
+  Disagreement               0.7224 [0.5939, 0.8215], n=6 sections
+  Fixed fusion               0.7085 [0.5803, 0.8159], n=6 sections
+  Max-probability            0.7224 [0.6084, 0.8212], n=6 sections
+  Endpoint margin            0.7355 [0.6356, 0.8261], n=6 sections
+  Single-member entropy      0.7285 [0.6116, 0.8300], n=6 sections
+Paired fusion minus entropy AUROC: -0.0172
+  95% section-bootstrap interval [-0.0314, -0.0015].
+These small-sample bootstrap intervals are exploratory, not a superiority claim.
+Additional exact paired sign-flip tests, six-comparison Holm adjustment and
+leave-one-section-out sensitivity are in paired_inference_sensitivity.csv.
+They were added after seeing outcomes and are sensitivity analyses, not preregistered tests.
+                   baseline  paired_difference  n_sections  sections_favoring_fusion  exact_sign_flip_p_two_sided  leave_one_section_out_min  leave_one_section_out_max  holm_p_six_comparisons
+composition_endpoint_margin          -0.026904           6                         2                      0.40625                  -0.048694                  -0.011863                 0.84375
+        composition_maxprob          -0.013826           6                         1                      0.06250                  -0.017978                  -0.007539                 0.37500
+          disagreement_only          -0.013839           6                         2                      0.28125                  -0.019830                  -0.006394                 0.84375
+               entropy_only          -0.017155           6                         2                      0.12500                  -0.022892                  -0.011583                 0.62500
+               novelty_only          -0.032999           6                         2                      0.34375                  -0.044711                  -0.010208                 0.84375
+         single_mlp_entropy          -0.019943           6                         2                      0.18750                  -0.027527                  -0.011357                 0.75000
+
+THRESHOLD TRANSPORT AND COMPLEXITY CONTROLS
+Original nominal-80% fusion threshold retained 44.5% of breast spots on an equal-section basis.
+Retained pathology AUROC was undefined in one breast section for several frozen
+threshold policies because both endpoint classes no longer remained. Undefined
+results were not converted to zero or silently called successful rejection.
+In all eight FFPE TLS sections, rescaled novelty saturated at 1 and its original
+threshold retained no spots. This is a transport/feature-panel failure diagnostic,
+not evidence that every spot is biologically unreliable.
+TLS and mixed pathology are complexity controls, not positive mapping-error labels.
+
+INTERPRETATION
+This adds real spatial testing of the joint-reference weights, which was missing.
+It does not demonstrate that fixed fusion improves pathology-consistent retention.
+The breast mean fell from unfiltered 0.7273 to fusion-retained 0.7085; entropy and
+novelty were competitive or better. No stronger performance claim is supported.
+A pathology proxy can disagree with estimated mixtures without proving composition
+error. Removing observations also changes case mix; matched random-retention
+controls and class counts are reported, not merely a favorable retained AUROC.
+
+LIMITATIONS AND WHAT REMAINS
+- Six coverage-eligible sections comprise ONE breast source cohort, not six cohorts.
+- The TLS source is a second source cohort; eight sections are not eight cohorts.
+- Public study provenance differs from training, but patient aliases are unresolved.
+- These cohorts had legacy-model exposure; this is retrospective, not a new blinded holdout.
+- The normalization universe is only partly present; unmeasured/filtered genes and
+  unresolved symbols remain a transport concern despite high model-feature coverage.
+- No new exact proportion truth, independent CRC rescue or mature-mapper rerun is supplied.
+- All ranking controls act on the same ensemble composition output; single-member
+  entropy is a score control here, not a separately evaluated mapping algorithm.
+- Unseen same-platform spatial development/calibration and genuinely untouched test
+  cohorts are still required before proposing revised score weights or thresholds.
+- Keep these 14 sections frozen as failure/transport evidence; do not tune on them
+  and then relabel the improved results as independent validation.
+
+NEXT SCIENTIFIC DECISION
+The current evidence supports an audit/limitations study, not a universal confidence
+guardrail claim. Any revised model needs a separate development cohort, compatible
+measurement panels and locked prospective test criteria. More similarly mismatched
+datasets alone do not resolve this failure.
+
+FILES
+PROTOCOL.txt and RUN_LOCK.json: design, source list, runtime, hashes, frozen thresholds.
+sample_inventory.csv and per-section input_audit.json: coverage, joins and provenance.
+*/predictions.csv.gz: compositions, component scores, labels and retention decisions.
+section_metrics_all.csv: every section, including technically ineligible diagnostics.
+coverage_eligible_statistics/: only the six coverage-eligible breast sections.
+section_bootstrap_summary.csv and paired_section_comparisons.csv: no spot-pooled tests.
+histology_associations.csv: artifact and complexity associations, explicitly not exact truth.
+frozen_joint_validation.png/.svg: summary with editable SVG text.
+
+normalization_count_mass_diagnostic.csv: observed-count denominator coverage.
+
+SOURCES
+https://zenodo.org/records/4739739
+https://zenodo.org/records/14620362
+https://github.com/navinlabcode/tnbc-chemo
+
+STORAGE
+D: remains Warning / Full Repair Needed. Original data and models were read only.
+Only small scripts and results were written to the C: recovery workspace.

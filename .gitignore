@@ -10,6 +10,8 @@ dist/
 .env.*
 joint_training_data/
 results/
+outputs/
+external_data/
 examples/toy_dataset/
 examples/toy_results/
 *.h5ad

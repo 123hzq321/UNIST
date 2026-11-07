@@ -1,0 +1,120 @@
+SPATIAL COVERAGE CALIBRATION AND SOURCE-HELD-OUT POLICY TRANSFER
+7 November 2026
+
+Completed execution
+Calibration: 16 existing sections, four TNBC patients and four LUAD cases.
+New frozen-model test: 13 sections from three other sources, 1,123,475 spots.
+- GSE251950: 10 gastric sections / 32,291 spots; all locally available sections.
+- GSE250163: one RCC section / 3,388 spots; a local subset, not the entire series.
+- GSE280318: two CRC HD sections / 1,087,796 nonzero-common-count 8-um bins.
+  Eighty-five zero-common-count bins were excluded (22 P5 and 63 P2).
+Ten gastric sections pass the pre-existing >=90% feature coverage gate.
+RCC has 85.60% and CRC 89.35% of selected model features. All three are review-only.
+The CRC library attributes specify Visium HD v1; its barcodes specify 8-um bins.
+Calibration uses conventional FFPE Visium for that stratum. Matching preservation
+does NOT make HD and conventional Visium the same assay or resolution.
+
+The frozen mapper has now been applied to 69 sections / 1,288,762 spots from nine
+source studies across these three audit rounds. This is a mapper-exposure ledger,
+not 69 independent policy-validation samples. Sixteen earlier sections now serve
+as calibration data. Twenty-four earlier RCC sections are reused for known TLS
+diagnostics and are NOT counted as new samples. Millions of correlated bins do
+not substitute for independent patients, cohorts or outcome labels.
+
+What changed and what stayed frozen
+No neural weights, selected genes, normalization, centroids, fusion coefficients
+or original thresholds changed. New policies use unlabeled spatial calibration
+scores only. New thresholds were locked before all 13 new-source predictions.
+Policy alternatives are original synthetic-mixture thresholds, patient-balanced
+spatial pooled thresholds and predicted-class-conditional thresholds. Unsupported
+conditional classes fall back to pooled calibration. Raw novelty/disagreement,
+entropy and composition confidence are all reported, with a hash-random control.
+This is empirical coverage calibration, NOT error-risk calibration or a conformal
+guarantee. Constant-score quantile ties are broken by label-blind hashing. Such
+random retention does not restore risk discrimination. There are only four
+calibration patients/cases per preparation, with one source per preparation.
+Source, cancer category, platform, resolution and preparation are confounded.
+
+New-source fixed-fusion results (equal section means, not spot pooled)
+   cohort preparation  sections                    policy  mean_coverage  mean_abs_coverage_error  eligible_sections
+GSE250163        FFPE         1        original_synthetic         0.2013                   0.5987                  0
+GSE250163        FFPE         1 spatial_class_conditional         1.0000                   0.2000                  0
+GSE250163        FFPE         1            spatial_pooled         1.0000                   0.2000                  0
+GSE251950      frozen        10        original_synthetic         0.2532                   0.5469                 10
+GSE251950      frozen        10 spatial_class_conditional         0.5576                   0.2617                 10
+GSE251950      frozen        10            spatial_pooled         0.4712                   0.3685                 10
+GSE280318        FFPE         2        original_synthetic         0.2794                   0.5206                  0
+GSE280318        FFPE         2 spatial_class_conditional         0.9986                   0.1986                  0
+GSE280318        FFPE         2            spatial_pooled         0.9974                   0.1974                  0
+
+Interpretation
+Gastric retention moves toward the target after calibration but remains variable
+and well below 80% on average. This does not establish better mapping accuracy.
+On the feature-limited new FFPE sources, recalibration allows nearly all spots
+under a hypothetical threshold policy; the input gate still disables automatic
+interpretation. Over-retention is also failed coverage transfer. Neither accepting
+everything nor rejecting everything demonstrates a useful uncertainty estimator.
+All scores and policies are in coverage_summary.csv; do not select fixed fusion
+as the winner based on these results. No exact error or cell-fraction truth was
+available for the new sources, so no error AUROC or biological rescue is claimed.
+
+TLS structure preservation: explicitly retrospective
+The preceding run already revealed TLS loss in GSE175540. These outcomes motivated
+the new policy family. Although no TLS labels entered numerical calibration, this
+is a known-outcome diagnostic, not independent confirmation. Patient IDs remain
+unresolved; seven frozen and ten FFPE sections have both TLS and non-TLS labels.
+Fixed-fusion descriptive results on the seven frozen two-class sections:
+preparation        score                    policy  n_two_class_sections  mean_tls_retention  mean_non_tls_retention  mean_retention_gap  valid_retained_auc_sections  mean_auc_change
+     frozen fixed_fusion        original_synthetic                     7              0.0375                  0.1681             -0.1306                            5          -0.0521
+     frozen fixed_fusion spatial_class_conditional                     7              0.4969                  0.4793              0.0176                            7          -0.0103
+     frozen fixed_fusion            spatial_pooled                     7              0.1889                  0.4522             -0.2633                            7           0.0284
+
+Class conditioning reduces the observed TLS/non-TLS selection imbalance in this
+retrospective subset. This is a hypothesis to test, not evidence that mapping
+errors were corrected. Retained-subset AUC changes are sensitive to selection;
+Policies have different realized test retention, so these are not equal-coverage
+superiority comparisons. A smaller TLS gap can also reflect changed composition.
+one-class retained subsets are missing. AUROC means can have different usable
+section counts, which are explicitly reported. The entropy and raw-score policies
+receive the same calibration treatment and must be compared before any incremental
+value claim. No post-result score selection or additional tuning was performed.
+
+Integrity and recovery
+Original 32-cell prediction replay passed. All original model artifacts and the
+16 calibration prediction files match their locked hashes. Fitted policies were
+not changed during the test. Two large CRC inputs initially stopped at progress
+logging because a path string was used as a Path object. Only this path conversion
+was fixed; only those two failed inputs were retried. The initial failure records,
+executed source and original RUN_LOCK are retained; resume_record.json records
+the original and corrected script hashes. No numerical fitting changed.
+37 tests pass, including streaming 50,001 spots through the string-path reader.
+
+Limits and the next evidence requirement
+All three new sources had legacy-model exposure; this is not a blinded study.
+Patient identities and cross-source aliases have not been fully established, so
+new-source means are descriptive, with no spot-level inferential statistics.
+The gastric GC6/GC6-PM names alone are not verified donor linkage. No survival,
+treatment effect or exact fraction truth is inferred. The unrelated 10x/Zenodo
+CRC histology annotation was not assigned to GSE280318 by barcode coincidence.
+
+A separate, source-held-out dataset with verified array-to-patient mapping and
+manual histology annotations is still required for independent biological rescue.
+The TNBC Zenodo resource distinguishes annotBySpot/annotsBySpot pixel annotations
+from classifAll expression-derived classifications. The latter cannot replace
+independent pathology truth. That independent manual-label experiment is not
+completed in this report. Future model or policy changes using these new test
+outcomes must reclassify the sources as development data and obtain another test.
+
+Reproduction and data stewardship
+Only aggregate reports, policy parameters, source hashes, code and figures are
+public. No new per-spot prediction files, raw matrices, clinical tables, patient
+records, mapper checkpoints or manuscript drafts were uploaded. D: remains read
+only because of filesystem warnings; aggregate recovery outputs are separate.
+
+Sources
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE251950
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE250163
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE280318
+https://zenodo.org/records/8135722
+Source GEO protocols were retrieved from the authoritative FTP SOFT endpoint;
+URLs and checksums are preserved in run_provenance_public.json.

@@ -1,0 +1,76 @@
+Spatial coverage calibration and source-held-out policy transfer
+Locked 7 November 2026 before new-source model inference.
+
+Motivation and exposure
+The earlier 56-section frozen audit exposed severe coverage shift and TLS loss.
+This is an exploratory development experiment motivated by those results, not
+a preregistered or blinded confirmation. Preserve every previous result.
+All new test sources have legacy-model exposure. Their frozen joint-model
+predictions and responses to the policies below have not been inspected when
+this protocol is locked. Cross-study donor aliases remain unresolved.
+
+Calibration
+Use GSE210616 (8 frozen TNBC sections / 4 explicit patients) for frozen tissue,
+and GSE300676 (8 FFPE LUAD sections / 4 source cases) for FFPE diagnostics.
+Only unlabeled scores and predicted composition from the previous frozen run
+may enter calibration. No pathology or TLS labels, test-source scores or test
+metadata beyond format/preparation/identity can determine thresholds.
+Weights give each patient/case equal mass, then each section within patient
+equal mass, then each spot within section equal mass.
+
+Policies, specified before inference
+Nominal retention 80%, selected before this experiment.
+1. Original synthetic-mixture threshold (the four original uncertainty scores).
+2. Spatial pooled weighted 80th percentile, separately for frozen and FFPE.
+3. Spatial predicted-dominant-class conditional weighted 80th percentile.
+Conditional bins require >=100 calibration spots and >=3 calibration patients;
+otherwise use the pre-specified pooled fallback. The seven original predicted
+classes define bins. No TLS, pathology or outcome label enters this rule.
+4. Label-blind hash-based 80% retention as a null control.
+
+Scores
+Original entropy, clipped novelty, clipped disagreement, fixed 0.5/0.3/0.2
+fusion; add raw novelty, raw disagreement, and one-minus-maximum-probability
+controls. Do not refit the mapper, centroids, feature set, score weights or
+original normalization. Clipped-score saturation is explicitly reported.
+At a weighted quantile tie, apply a fixed sample+barcode hash with an acceptance
+fraction fixed from calibration tied mass. Restoring retention by breaking
+constant-score ties is random selection, not restored risk discrimination.
+
+New-source frozen-model test
+GSE251950: all 10 locally available gastric sections; new cancer category.
+GSE250163: the one locally available RCC section (not the full source series).
+GSE280318: the two locally available CRC HD sections (P2/P5); new cancer category.
+Count all nonzero-common-count spots from original filtered 10x H5 inputs.
+Stream chunks to avoid dense full-slide matrices. Export aggregate results only.
+Confirm preparation from source extraction protocols, never infer from H5 size.
+No exact composition or error truth is available for these 13 sections.
+GSE280318 expression must not be assigned the unrelated 10x/Zenodo CRC annotations
+merely because spatial bin barcodes look alike. No new CRC rescue is claimed.
+
+Secondary structure-preservation test
+Re-use GSE175540 TLS predictions and labels without fitting any policy to them.
+Because their previous results motivated this experiment, this is a retrospective
+diagnostic, NOT independent biological replication. Restrict retention contrasts
+to sections with both author TLS and NO_TLS annotations. One-class AUC is missing.
+Report TLS/non-TLS retention and B/Plasma-TLS AUC changes for all policies/scores;
+do not choose a winner after observing an endpoint. No spot-level significance.
+
+Validity and statistical units
+Below 90% frozen model-feature coverage, all automatic interpretation is disabled:
+review-only status. Report hypothetical threshold behavior separately. Meeting
+coverage alone never certifies accuracy. Do not extrapolate calibration across
+an unrecognized preparation. Breast/lung calibration diagnostics are patient/case
+balanced. New test summaries are descriptive section means unless source patient
+identities are verified. Do not pool spots to inflate independent sample size.
+The gastric GC6/GC6-PM title pair is not by itself verified donor linkage.
+RCC TLS source patient IDs are unresolved; no patient population CI is claimed.
+No conformal risk, distribution-free coverage, or clinical guarantee is claimed.
+
+Artifacts
+Write protocol hash, all calibration prediction hashes, fixed policy parameters,
+source metadata hashes and new input hashes before scoring new data. Do not
+overwrite an existing lock. Check original checkpoints, calibration predictions,
+and protocol at completion. Retain every technical failure and negative result.
+D: is read-only due filesystem warning. Only small aggregate recovery outputs
+and code may be written to a separate healthy location; no raw data copies.

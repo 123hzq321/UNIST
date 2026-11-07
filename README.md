@@ -4,6 +4,43 @@ UNIST is a research package for auditing uncertainty in single-cell reference ma
 
 This repository contains the UNIST 0.1.0 package and a separate donor-disjoint joint-reference experiment. See [reproducibility scope](docs/reproducibility.md) before interpreting the results. Uncertainty is endpoint-dependent, and fixed fusion is not consistently superior to individual scores.
 
+## Frozen Joint-Model Spatial Audit
+
+The [7 November 2026 validation study](studies/frozen_joint_spatial_20261107/README.md)
+reports real spatial testing of the frozen joint-reference model: 14 sections,
+39,857 spots, two source cohorts. Six breast sections passed the model-feature
+coverage gate; eight kidney/lung FFPE sections are transport diagnostics only.
+Fixed fusion did not improve the breast pathology endpoint over the simple
+scores, and the original rejection thresholds did not preserve nominal coverage.
+Negative outcomes, section-level statistics and reproduction scripts are included.
+These are retrospective histology-proxy analyses, not exact cell-fraction truth
+or clinical validation. Raw data and fitted weights are not included.
+
+The [next-cohort qualification audit](studies/spatial_calibration_candidate_audit_20261107/REPORT.txt)
+checked 24 additional RCC sections and recorded unresolved patient identities and
+annotation schemas. It was a pre-inference inspection, not a separate model test.
+
+The [cross-dataset expansion](studies/cross_dataset_joint_20261107/REPORT.txt)
+has now tested 42 additional sections / 125,430 spots from four source studies,
+including those 24 RCC sections. The combined frozen-model audit covers 56
+sections / 165,287 spots from six sources, not 56 independent patient cohorts.
+Twenty of the new sections pass the feature-coverage gate; 22 FFPE sections are
+feature-limited diagnostics. Frozen thresholds lose nominal coverage, and fixed
+fusion can preferentially reject author-annotated TLS. These negative findings
+do not establish mapping accuracy or a successful biological rescue. No model
+weights or thresholds were adapted to these data. See the metadata correction
+record for verified identities and preparation of the two GSE210041 samples.
+
+The [spatial policy-transfer experiment](studies/spatial_policy_transfer_20261107/README.md)
+uses 16 of those sections for unlabeled, patient-balanced spatial calibration and
+tests the locked policies on 13 further gastric, RCC and CRC HD sections. This adds
+1,123,475 spots/bins, mostly from two HD sections, not new independent patients.
+Coverage transfer remains unreliable. Known RCC TLS diagnostics suggest class
+conditioning changes structure selection, but independent biological rescue has
+not been demonstrated. The mapper-exposure total is now 69 sections / 1,288,762
+spots from nine sources; calibration and reused diagnostic sections must not be
+counted as independent policy tests. Neural weights remain unchanged.
+
 The package is designed for a specific question: when a single-cell reference is mapped onto a spatial query, can the model flag regions or cohorts where the mapping should not be over-interpreted?
 
 UNIST is not intended to replace mature deconvolution tools such as RCTD, cell2location, Tangram or stereoscope. It provides a complementary uncertainty layer for cross-patient, cross-platform and cross-cancer spatial tumour microenvironment interpretation.

@@ -1,0 +1,103 @@
+Frozen joint-reference spatial validation, analysis version 20261107-v2
+
+Purpose
+Test the previously frozen joint model on real spatial expression with
+independently supplied histology annotations. This fills the model-version gap
+between joint reference experiments and legacy spatial experiments. It does not
+create exact composition truth or prove that a biological mechanism was rescued.
+
+Design status
+This protocol is saved before computing new joint-model spatial predictions.
+It is NOT a preregistration. The cohorts and their legacy-model results have
+already been examined in this project. No selection based on new joint results
+is allowed. All six available Wu breast sections and all eight Zurich TLS
+sections are included, including failures and technical exclusions.
+
+Sources
+1. Wu/Swarbrick 2021 breast Visium: six primary breast cancers, author H&E spot
+   pathology. https://zenodo.org/records/4739739
+2. Zurich TLS Visium: three kidney and five lung tumors, FFPE Human Probe Set v1,
+   manual H&E annotation. https://zenodo.org/records/14620362
+Use manual_anno/manual_anno_tls, not aestetik predicted annotations.
+
+Source distinction
+Joint reference training used the Navin untreated TNBC collection, KNUH lung
+adenocarcinoma study and the Young 2021 kidney study. External study provenance
+is distinct, but public pseudonyms do not prove the absence of cross-study
+patient aliases. Report sections, not verified independent patient counts.
+
+Frozen state
+Use all three joint_mlp_ensemble_v1 checkpoints. Compare their SHA256 values
+with the archived checkpoint manifest. Use the original 2,000 Ensembl features,
+31,738-gene normalization denominator, training class centroids, and original
+synthetic-mixture calibration scales and thresholds. No fitting, feature
+selection, score-weight adjustment or pathology calibration on external data.
+Replay 32 existing test-cell predictions as a technical check before any new
+inference. This replay is not counted as external evidence.
+
+Preprocessing
+Read the full raw count matrices, not the legacy 918/938-gene materializations.
+Map Ensembl IDs, strip version suffixes and sum duplicate IDs. Normalize to
+CP10K using available genes in the fixed common-gene universe; missing genes
+are recorded and receive zero, without learned imputation. Report the fraction
+of features and denominator genes available. At least 90% of model features is
+required for the coverage-eligible analysis. Below this threshold, report only
+technical/domain-shift diagnostics, not primary efficacy. This gate is technical
+and does not imply that 90% gene coverage guarantees transfer validity.
+Join annotations by exact barcode; report unmatched and zero-count exclusions.
+
+Endpoints
+Breast: predicted epithelial-or-author-tumor fraction ranks epithelial-present
+versus non-epithelial pathology classes. Epithelial-present classes contain
+Invasive cancer, Cancer trapped, DCIS, Normal glands, Normal duct or Normal +. Exclude Artefact,
+Necrosis, Uncertain and missing annotations from this composition endpoint.
+Mixed labels indicate presence, not exact proportions or composition error.
+Artefact association is a separate technical-risk proxy. Mixed-pathology
+association is an ambiguity control, NOT an error/OOD benchmark.
+
+TLS: sum of B/Plasma, T/NK/ILC and Myeloid predictions ranks manually labelled
+TLS/inflammation versus tumor. Normal and unassigned regions are excluded from
+this endpoint. TLS retention and association are biological complexity controls;
+TLS is NOT labelled an error. Benign epithelium and tumor are not separated by
+the model's broad epithelial label.
+
+Comparisons and policies
+Entropy, novelty, ensemble disagreement, fixed fusion and single-member entropy.
+Two additional composition-derived ranking controls: one minus maximum class
+probability, and one minus absolute binary endpoint margin. These are simple
+score baselines, not a fitted composition-only pathology classifier.
+1. Deploy frozen original mixture-calibration 80% thresholds. Actual new-tissue
+   coverage may differ greatly from 80%; report it, including complete rejection.
+2. Retrospective 80% within-section retention for ranking comparison. This is
+   not prospective threshold calibration. Break ties by fixed barcode hash,
+   independent of labels; report clipping fractions and unique score counts.
+Report pathology AUROC before/after retention, retained class counts, and a
+100-draw random-retention control matched to retained annotated sample size.
+Do not report a gain when only one pathology class remains.
+
+Statistics
+Equal-section means within source and cancer. 5,000 section bootstrap draws for
+95% intervals; pair scores on the same section. No spot-pooled significance,
+no patient-level claim without identity confirmation, and no multiplicity-
+unadjusted superiority claim. Small groups (3 kidney, 5 lung, 6 breast) remain
+limited even with many spots. Source groups are not pooled as one cohort.
+All-sample diagnostic summaries must retain the coverage flag; report coverage-
+eligible summaries separately. Correlated sections can make bootstrap intervals
+optimistic; independent patient identities remain a limitation.
+
+Storage and provenance
+D: LaCie/exFAT reports Warning / Full Repair Needed as of this run. Read only;
+do not repair or write to it. Existing matrices/checkpoints stay on D. Small
+code, predictions and reports are written to the current C: recovery workspace.
+No new datasets downloaded, no manuscript results overwritten, no submission.
+
+Format-only rerun note
+The first execution completed the eight TLS sections but failed to read six
+breast inputs because their .gz suffixes did not describe their compression.
+Its original outputs and runner snapshot are preserved in the v1 directory.
+Version 2 detects gzip by file signature and maps breast gene symbols using
+gene_symbols/feature_name metadata from the frozen training reference. Only
+unambiguous aliases are accepted; the mapping is saved and hashed. Gene symbols
+containing dots are not treated as Ensembl versions. Outcomes, score weights,
+thresholds and the 90% technical coverage rule are unchanged. This technical
+rerun is not an additional independent validation cohort.

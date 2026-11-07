@@ -1,0 +1,15 @@
+{
+  "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE175nnn/GSE175540/soft/GSE175540_family.soft.gz",
+  "metadata_sha256": "82cb69e1e856c6007e7ff6728a541ce26a34fbedf5688c431b20fad76dc352a3",
+  "metadata_download_bytes": 3976,
+  "geo_samples": 24,
+  "local_sections": 24,
+  "local_spots": 74220,
+  "sections_with_annotations": 23,
+  "sections_with_explicit_binary_tls_annotations": 20,
+  "sections_with_explicit_identity_metadata": 0,
+  "new_model_predictions_run": false,
+  "new_patient_level_split_created": false,
+  "original_14_section_validation_unchanged": true,
+  "input_data_written": false
+}

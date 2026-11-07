@@ -1,0 +1,1350 @@
+{
+  "FFPE": {
+    "entropy_only": {
+      "pooled": {
+        "value": 0.8402397128522626,
+        "tie_acceptance": 0.3016686573862817,
+        "below_mass": 0.7999903236894603,
+        "tied_mass": 3.207595586348473e-05,
+        "expected_calibration_coverage": 0.8
+      },
+      "conditional": {
+        "proportion_B_Plasma": {
+          "rule": {
+            "value": 0.8803864280520358,
+            "tie_acceptance": 0.0072791693528566626,
+            "below_mass": 0.7996967012769644,
+            "tied_mass": 0.041666666666666664,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 559,
+          "n_units": 4
+        },
+        "proportion_Endothelial": {
+          "rule": {
+            "value": 0.8402397128522626,
+            "tie_acceptance": 0.3016686573862817,
+            "below_mass": 0.7999903236894603,
+            "tied_mass": 3.207595586348473e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 14,
+          "n_units": 3
+        },
+        "proportion_Epithelial_or_author_tumor": {
+          "rule": {
+            "value": 0.8119493561194979,
+            "tie_acceptance": 0.6375774094576235,
+            "below_mass": 0.7999493986182971,
+            "tied_mass": 7.936507936507938e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 20858,
+          "n_units": 4
+        },
+        "proportion_Fibroblast": {
+          "rule": {
+            "value": 0.8568924145169929,
+            "tie_acceptance": 0.9368615334771739,
+            "below_mass": 0.7707230770788384,
+            "tied_mass": 0.03125,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 579,
+          "n_units": 4
+        },
+        "proportion_Myeloid": {
+          "rule": {
+            "value": 0.881428179116336,
+            "tie_acceptance": 0.4161395179211436,
+            "below_mass": 0.7999822162599179,
+            "tied_mass": 4.273504273504273e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 10424,
+          "n_units": 4
+        },
+        "proportion_Perivascular": {
+          "rule": {
+            "value": 0.8546435677178515,
+            "tie_acceptance": 0.6558756702626204,
+            "below_mass": 0.7991634238899712,
+            "tied_mass": 0.0012755102040816328,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 763,
+          "n_units": 4
+        },
+        "proportion_T_NK_ILC": {
+          "rule": {
+            "value": 0.883154036863085,
+            "tie_acceptance": 0.15082824760200172,
+            "below_mass": 0.7999180281263033,
+            "tied_mass": 0.0005434782608695653,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 430,
+          "n_units": 4
+        }
+      },
+      "calibration_constant": false
+    },
+    "novelty_only": {
+      "pooled": {
+        "value": 1.0,
+        "tie_acceptance": 0.8,
+        "below_mass": 0.0,
+        "tied_mass": 1.0,
+        "expected_calibration_coverage": 0.8
+      },
+      "conditional": {
+        "proportion_B_Plasma": {
+          "rule": {
+            "value": 1.0,
+            "tie_acceptance": 0.8,
+            "below_mass": 0.0,
+            "tied_mass": 1.0,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 559,
+          "n_units": 4
+        },
+        "proportion_Endothelial": {
+          "rule": {
+            "value": 1.0,
+            "tie_acceptance": 0.8,
+            "below_mass": 0.0,
+            "tied_mass": 1.0,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 14,
+          "n_units": 3
+        },
+        "proportion_Epithelial_or_author_tumor": {
+          "rule": {
+            "value": 1.0,
+            "tie_acceptance": 0.8,
+            "below_mass": 0.0,
+            "tied_mass": 1.0,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 20858,
+          "n_units": 4
+        },
+        "proportion_Fibroblast": {
+          "rule": {
+            "value": 1.0,
+            "tie_acceptance": 0.8,
+            "below_mass": 0.0,
+            "tied_mass": 1.0,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 579,
+          "n_units": 4
+        },
+        "proportion_Myeloid": {
+          "rule": {
+            "value": 1.0,
+            "tie_acceptance": 0.8000000000000003,
+            "below_mass": 0.0,
+            "tied_mass": 0.9999999999999998,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 10424,
+          "n_units": 4
+        },
+        "proportion_Perivascular": {
+          "rule": {
+            "value": 1.0,
+            "tie_acceptance": 0.8,
+            "below_mass": 0.0,
+            "tied_mass": 1.0,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 763,
+          "n_units": 4
+        },
+        "proportion_T_NK_ILC": {
+          "rule": {
+            "value": 1.0,
+            "tie_acceptance": 0.8,
+            "below_mass": 0.0,
+            "tied_mass": 1.0,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 430,
+          "n_units": 4
+        }
+      },
+      "calibration_constant": true
+    },
+    "disagreement_only": {
+      "pooled": {
+        "value": 1.0,
+        "tie_acceptance": 0.6712903983332816,
+        "below_mass": 0.3915602130698279,
+        "tied_mass": 0.608439786930172,
+        "expected_calibration_coverage": 0.8
+      },
+      "conditional": {
+        "proportion_B_Plasma": {
+          "rule": {
+            "value": 1.0,
+            "tie_acceptance": 0.7321611096706029,
+            "below_mass": 0.25328244993087673,
+            "tied_mass": 0.7467175500691232,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 559,
+          "n_units": 4
+        },
+        "proportion_Endothelial": {
+          "rule": {
+            "value": 1.0,
+            "tie_acceptance": 0.6712903983332816,
+            "below_mass": 0.3915602130698279,
+            "tied_mass": 0.608439786930172,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 14,
+          "n_units": 3
+        },
+        "proportion_Epithelial_or_author_tumor": {
+          "rule": {
+            "value": 1.0,
+            "tie_acceptance": 0.6650119717517282,
+            "below_mass": 0.4029637385973306,
+            "tied_mass": 0.5970362614026695,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 20858,
+          "n_units": 4
+        },
+        "proportion_Fibroblast": {
+          "rule": {
+            "value": 1.0,
+            "tie_acceptance": 0.7715390271206828,
+            "below_mass": 0.12457695737097145,
+            "tied_mass": 0.8754230426290285,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 579,
+          "n_units": 4
+        },
+        "proportion_Myeloid": {
+          "rule": {
+            "value": 1.0,
+            "tie_acceptance": 0.6903897064295289,
+            "below_mass": 0.3540266452592043,
+            "tied_mass": 0.6459733547407955,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 10424,
+          "n_units": 4
+        },
+        "proportion_Perivascular": {
+          "rule": {
+            "value": 1.0,
+            "tie_acceptance": 0.7599718337421655,
+            "below_mass": 0.16676445469669152,
+            "tied_mass": 0.8332355453033085,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 763,
+          "n_units": 4
+        },
+        "proportion_T_NK_ILC": {
+          "rule": {
+            "value": 1.0,
+            "tie_acceptance": 0.35891796193415876,
+            "below_mass": 0.6880274471526227,
+            "tied_mass": 0.31197255284737757,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 430,
+          "n_units": 4
+        }
+      },
+      "calibration_constant": false
+    },
+    "fixed_fusion": {
+      "pooled": {
+        "value": 0.908905931121724,
+        "tie_acceptance": 0.399700558890979,
+        "below_mass": 0.7999892298836255,
+        "tied_mass": 2.694546238413451e-05,
+        "expected_calibration_coverage": 0.8
+      },
+      "conditional": {
+        "proportion_B_Plasma": {
+          "rule": {
+            "value": 0.938295134596056,
+            "tie_acceptance": 0.03988347009480364,
+            "below_mass": 0.7983381887460499,
+            "tied_mass": 0.041666666666666664,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 559,
+          "n_units": 4
+        },
+        "proportion_Endothelial": {
+          "rule": {
+            "value": 0.908905931121724,
+            "tie_acceptance": 0.399700558890979,
+            "below_mass": 0.7999892298836255,
+            "tied_mass": 2.694546238413451e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 14,
+          "n_units": 3
+        },
+        "proportion_Epithelial_or_author_tumor": {
+          "rule": {
+            "value": 0.8936258842774727,
+            "tie_acceptance": 0.6774062374963952,
+            "below_mass": 0.7998995542352467,
+            "tied_mass": 0.00014827995255041522,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 20858,
+          "n_units": 4
+        },
+        "proportion_Fibroblast": {
+          "rule": {
+            "value": 0.9284462221596576,
+            "tie_acceptance": 0.48791590198737467,
+            "below_mass": 0.7847526280628946,
+            "tied_mass": 0.03125,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 579,
+          "n_units": 4
+        },
+        "proportion_Myeloid": {
+          "rule": {
+            "value": 0.9358445231906064,
+            "tie_acceptance": 0.04546791147725938,
+            "below_mass": 0.79999805692686,
+            "tied_mass": 4.273504273504273e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 10424,
+          "n_units": 4
+        },
+        "proportion_Perivascular": {
+          "rule": {
+            "value": 0.9245118889134658,
+            "tie_acceptance": 0.03303452960114583,
+            "below_mass": 0.7999787148649478,
+            "tied_mass": 0.0006443298969072166,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 763,
+          "n_units": 4
+        },
+        "proportion_T_NK_ILC": {
+          "rule": {
+            "value": 0.9390397675973244,
+            "tie_acceptance": 0.3015541488192212,
+            "below_mass": 0.7958117479330664,
+            "tied_mass": 0.013888888888888892,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 430,
+          "n_units": 4
+        }
+      },
+      "calibration_constant": false
+    },
+    "novelty_raw": {
+      "pooled": {
+        "value": 1.0952175,
+        "tie_acceptance": 0.08612879287919739,
+        "below_mass": 0.7999972373366411,
+        "tied_mass": 3.207595586348473e-05,
+        "expected_calibration_coverage": 0.8
+      },
+      "conditional": {
+        "proportion_B_Plasma": {
+          "rule": {
+            "value": 1.1495401,
+            "tie_acceptance": 0.4854725727054632,
+            "below_mass": 0.7878631856823635,
+            "tied_mass": 0.025,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 559,
+          "n_units": 4
+        },
+        "proportion_Endothelial": {
+          "rule": {
+            "value": 1.0952175,
+            "tie_acceptance": 0.08612879287919739,
+            "below_mass": 0.7999972373366411,
+            "tied_mass": 3.207595586348473e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 14,
+          "n_units": 3
+        },
+        "proportion_Epithelial_or_author_tumor": {
+          "rule": {
+            "value": 1.0729756,
+            "tie_acceptance": 0.497697246029368,
+            "below_mass": 0.7999783835456034,
+            "tied_mass": 4.3432939541348164e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 20858,
+          "n_units": 4
+        },
+        "proportion_Fibroblast": {
+          "rule": {
+            "value": 1.1679993,
+            "tie_acceptance": 0.3163329521580689,
+            "below_mass": 0.7988370112053013,
+            "tied_mass": 0.003676470588235294,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 579,
+          "n_units": 4
+        },
+        "proportion_Myeloid": {
+          "rule": {
+            "value": 1.1286259,
+            "tie_acceptance": 0.9317780822753142,
+            "below_mass": 0.7999601804238344,
+            "tied_mass": 4.273504273504273e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 10424,
+          "n_units": 4
+        },
+        "proportion_Perivascular": {
+          "rule": {
+            "value": 1.1451752,
+            "tie_acceptance": 0.3953610598471559,
+            "below_mass": 0.792939981074158,
+            "tied_mass": 0.01785714285714286,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 763,
+          "n_units": 4
+        },
+        "proportion_T_NK_ILC": {
+          "rule": {
+            "value": 1.0662947,
+            "tie_acceptance": 0.3117900509204449,
+            "below_mass": 0.7987427820527402,
+            "tied_mass": 0.00403225806451613,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 430,
+          "n_units": 4
+        }
+      },
+      "calibration_constant": false
+    },
+    "disagreement_raw": {
+      "pooled": {
+        "value": 0.0014271218,
+        "tie_acceptance": 0.9887102282106497,
+        "below_mass": 0.7999727297487806,
+        "tied_mass": 2.7581641659311563e-05,
+        "expected_calibration_coverage": 0.8
+      },
+      "conditional": {
+        "proportion_B_Plasma": {
+          "rule": {
+            "value": 0.0020021312,
+            "tie_acceptance": 0.9713746605298788,
+            "below_mass": 0.7988757237725349,
+            "tied_mass": 0.0011574074074074073,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 559,
+          "n_units": 4
+        },
+        "proportion_Endothelial": {
+          "rule": {
+            "value": 0.0014271218,
+            "tie_acceptance": 0.9887102282106497,
+            "below_mass": 0.7999727297487806,
+            "tied_mass": 2.7581641659311563e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 14,
+          "n_units": 3
+        },
+        "proportion_Epithelial_or_author_tumor": {
+          "rule": {
+            "value": 0.001341685,
+            "tie_acceptance": 0.24998371264230454,
+            "below_mass": 0.7999851624102183,
+            "tied_mass": 5.93542260208927e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 20858,
+          "n_units": 4
+        },
+        "proportion_Fibroblast": {
+          "rule": {
+            "value": 0.003884151,
+            "tie_acceptance": 0.1329171178800248,
+            "below_mass": 0.7999465767211094,
+            "tied_mass": 0.00040192926045016077,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 579,
+          "n_units": 4
+        },
+        "proportion_Myeloid": {
+          "rule": {
+            "value": 0.0014624954,
+            "tie_acceptance": 0.6280641699052351,
+            "below_mass": 0.7976209690533893,
+            "tied_mass": 0.003787878787878787,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 10424,
+          "n_units": 4
+        },
+        "proportion_Perivascular": {
+          "rule": {
+            "value": 0.0024996474,
+            "tie_acceptance": 0.052029518060464845,
+            "below_mass": 0.7999453471448945,
+            "tied_mass": 0.001050420168067227,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 763,
+          "n_units": 4
+        },
+        "proportion_T_NK_ILC": {
+          "rule": {
+            "value": 0.0009697676,
+            "tie_acceptance": 0.17519089917389147,
+            "below_mass": 0.7998520347135356,
+            "tied_mass": 0.0008445945945945949,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 430,
+          "n_units": 4
+        }
+      },
+      "calibration_constant": false
+    },
+    "composition_maxprob": {
+      "pooled": {
+        "value": 0.6805066,
+        "tie_acceptance": 0.5271457607862882,
+        "below_mass": 0.7999830912958434,
+        "tied_mass": 3.207595586348473e-05,
+        "expected_calibration_coverage": 0.8
+      },
+      "conditional": {
+        "proportion_B_Plasma": {
+          "rule": {
+            "value": 0.7437461599999999,
+            "tie_acceptance": 0.3332705121610253,
+            "below_mass": 0.7861137286599573,
+            "tied_mass": 0.041666666666666664,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 559,
+          "n_units": 4
+        },
+        "proportion_Endothelial": {
+          "rule": {
+            "value": 0.6805066,
+            "tie_acceptance": 0.5271457607862882,
+            "below_mass": 0.7999830912958434,
+            "tied_mass": 3.207595586348473e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 14,
+          "n_units": 3
+        },
+        "proportion_Epithelial_or_author_tumor": {
+          "rule": {
+            "value": 0.6518841,
+            "tie_acceptance": 0.44718375285545425,
+            "below_mass": 0.7999736205903224,
+            "tied_mass": 5.89900896649363e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 20858,
+          "n_units": 4
+        },
+        "proportion_Fibroblast": {
+          "rule": {
+            "value": 0.71659136,
+            "tie_acceptance": 0.07837421098509445,
+            "below_mass": 0.7998873933750215,
+            "tied_mass": 0.0014367816091954023,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 579,
+          "n_units": 4
+        },
+        "proportion_Myeloid": {
+          "rule": {
+            "value": 0.72014695,
+            "tie_acceptance": 0.391624492072622,
+            "below_mass": 0.7999689974277967,
+            "tied_mass": 7.91640278657378e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 10424,
+          "n_units": 4
+        },
+        "proportion_Perivascular": {
+          "rule": {
+            "value": 0.6984549,
+            "tie_acceptance": 0.16746957600182275,
+            "below_mass": 0.7998240865798301,
+            "tied_mass": 0.001050420168067227,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 763,
+          "n_units": 4
+        },
+        "proportion_T_NK_ILC": {
+          "rule": {
+            "value": 0.75792189,
+            "tie_acceptance": 0.5201146447990758,
+            "below_mass": 0.7674928347000578,
+            "tied_mass": 0.06250000000000001,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 430,
+          "n_units": 4
+        }
+      },
+      "calibration_constant": false
+    }
+  },
+  "frozen": {
+    "entropy_only": {
+      "pooled": {
+        "value": 0.5795969046829795,
+        "tie_acceptance": 0.7300148576168829,
+        "below_mass": 0.7999328536738763,
+        "tied_mass": 9.197939661515822e-05,
+        "expected_calibration_coverage": 0.8
+      },
+      "conditional": {
+        "proportion_B_Plasma": {
+          "rule": {
+            "value": 0.8066605320746189,
+            "tie_acceptance": 0.7297762478485579,
+            "below_mass": 0.7989692425877846,
+            "tied_mass": 0.0014124293785310734,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 393,
+          "n_units": 3
+        },
+        "proportion_Endothelial": {
+          "rule": {
+            "value": 0.5795969046829795,
+            "tie_acceptance": 0.7300148576168829,
+            "below_mass": 0.7999328536738763,
+            "tied_mass": 9.197939661515822e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 53,
+          "n_units": 3
+        },
+        "proportion_Epithelial_or_author_tumor": {
+          "rule": {
+            "value": 0.4785714335054605,
+            "tie_acceptance": 0.9727755425018465,
+            "below_mass": 0.7998513484806691,
+            "tied_mass": 0.0001528117359413203,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 9404,
+          "n_units": 4
+        },
+        "proportion_Fibroblast": {
+          "rule": {
+            "value": 0.793801813659708,
+            "tie_acceptance": 0.7342198581559163,
+            "below_mass": 0.7994504342379073,
+            "tied_mass": 0.0007485029940119763,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 345,
+          "n_units": 4
+        },
+        "proportion_Myeloid": {
+          "rule": {
+            "value": 0.7876868788766879,
+            "tie_acceptance": 0.11811734364925106,
+            "below_mass": 0.7950784440146146,
+            "tied_mass": 0.04166666666666668,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 280,
+          "n_units": 4
+        },
+        "proportion_Perivascular": {
+          "rule": {
+            "value": 0.5795969046829795,
+            "tie_acceptance": 0.7300148576168829,
+            "below_mass": 0.7999328536738763,
+            "tied_mass": 9.197939661515822e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 6,
+          "n_units": 3
+        },
+        "proportion_T_NK_ILC": {
+          "rule": {
+            "value": 0.5795969046829795,
+            "tie_acceptance": 0.7300148576168829,
+            "below_mass": 0.7999328536738763,
+            "tied_mass": 9.197939661515822e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 23,
+          "n_units": 2
+        }
+      },
+      "calibration_constant": false
+    },
+    "novelty_only": {
+      "pooled": {
+        "value": 0.8407691,
+        "tie_acceptance": 0.3055619005774694,
+        "below_mass": 0.7999752300664253,
+        "tied_mass": 8.106355382619975e-05,
+        "expected_calibration_coverage": 0.8
+      },
+      "conditional": {
+        "proportion_B_Plasma": {
+          "rule": {
+            "value": 1.0,
+            "tie_acceptance": 0.5383808648517552,
+            "below_mass": 0.5667423969854029,
+            "tied_mass": 0.4332576030145971,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 393,
+          "n_units": 3
+        },
+        "proportion_Endothelial": {
+          "rule": {
+            "value": 0.8407691,
+            "tie_acceptance": 0.3055619005774694,
+            "below_mass": 0.7999752300664253,
+            "tied_mass": 8.106355382619975e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 53,
+          "n_units": 3
+        },
+        "proportion_Epithelial_or_author_tumor": {
+          "rule": {
+            "value": 0.74531025,
+            "tie_acceptance": 0.36601452611682017,
+            "below_mass": 0.7999762328229795,
+            "tied_mass": 6.493506493506494e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 9404,
+          "n_units": 4
+        },
+        "proportion_Fibroblast": {
+          "rule": {
+            "value": 1.0,
+            "tie_acceptance": 0.44120653205789784,
+            "below_mass": 0.6420860094579302,
+            "tied_mass": 0.35791399054206985,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 345,
+          "n_units": 4
+        },
+        "proportion_Myeloid": {
+          "rule": {
+            "value": 1.0,
+            "tie_acceptance": 0.6681848606668472,
+            "below_mass": 0.39725474732123695,
+            "tied_mass": 0.6027452526787633,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 280,
+          "n_units": 4
+        },
+        "proportion_Perivascular": {
+          "rule": {
+            "value": 0.8407691,
+            "tie_acceptance": 0.3055619005774694,
+            "below_mass": 0.7999752300664253,
+            "tied_mass": 8.106355382619975e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 6,
+          "n_units": 3
+        },
+        "proportion_T_NK_ILC": {
+          "rule": {
+            "value": 0.8407691,
+            "tie_acceptance": 0.3055619005774694,
+            "below_mass": 0.7999752300664253,
+            "tied_mass": 8.106355382619975e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 23,
+          "n_units": 2
+        }
+      },
+      "calibration_constant": false
+    },
+    "disagreement_only": {
+      "pooled": {
+        "value": 0.80413896,
+        "tie_acceptance": 0.5708516917277205,
+        "below_mass": 0.7999633881675393,
+        "tied_mass": 6.413545407901489e-05,
+        "expected_calibration_coverage": 0.8
+      },
+      "conditional": {
+        "proportion_B_Plasma": {
+          "rule": {
+            "value": 1.0,
+            "tie_acceptance": 0.43327057392647483,
+            "below_mass": 0.6470979081046468,
+            "tied_mass": 0.3529020918953531,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 393,
+          "n_units": 3
+        },
+        "proportion_Endothelial": {
+          "rule": {
+            "value": 0.80413896,
+            "tie_acceptance": 0.5708516917277205,
+            "below_mass": 0.7999633881675393,
+            "tied_mass": 6.413545407901489e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 53,
+          "n_units": 3
+        },
+        "proportion_Epithelial_or_author_tumor": {
+          "rule": {
+            "value": 0.7063376,
+            "tie_acceptance": 0.49683484714874915,
+            "below_mass": 0.7999428136686063,
+            "tied_mass": 0.00011510128913443831,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 9404,
+          "n_units": 4
+        },
+        "proportion_Fibroblast": {
+          "rule": {
+            "value": 1.0,
+            "tie_acceptance": 0.6643270517586284,
+            "below_mass": 0.4041819543462691,
+            "tied_mass": 0.595818045653731,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 345,
+          "n_units": 4
+        },
+        "proportion_Myeloid": {
+          "rule": {
+            "value": 1.0,
+            "tie_acceptance": 0.6501321732300113,
+            "below_mass": 0.4283555540204478,
+            "tied_mass": 0.5716444459795526,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 280,
+          "n_units": 4
+        },
+        "proportion_Perivascular": {
+          "rule": {
+            "value": 0.80413896,
+            "tie_acceptance": 0.5708516917277205,
+            "below_mass": 0.7999633881675393,
+            "tied_mass": 6.413545407901489e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 6,
+          "n_units": 3
+        },
+        "proportion_T_NK_ILC": {
+          "rule": {
+            "value": 0.80413896,
+            "tie_acceptance": 0.5708516917277205,
+            "below_mass": 0.7999633881675393,
+            "tied_mass": 6.413545407901489e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 23,
+          "n_units": 2
+        }
+      },
+      "calibration_constant": false
+    },
+    "fixed_fusion": {
+      "pooled": {
+        "value": 0.6591839805444843,
+        "tie_acceptance": 0.5998695067133512,
+        "below_mass": 0.7999460936819992,
+        "tied_mass": 8.986340762041698e-05,
+        "expected_calibration_coverage": 0.8
+      },
+      "conditional": {
+        "proportion_B_Plasma": {
+          "rule": {
+            "value": 0.8293953120529182,
+            "tie_acceptance": 0.5302689958602347,
+            "below_mass": 0.7987374547717614,
+            "tied_mass": 0.002380952380952381,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 393,
+          "n_units": 3
+        },
+        "proportion_Endothelial": {
+          "rule": {
+            "value": 0.6591839805444843,
+            "tie_acceptance": 0.5998695067133512,
+            "below_mass": 0.7999460936819992,
+            "tied_mass": 8.986340762041698e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 53,
+          "n_units": 3
+        },
+        "proportion_Epithelial_or_author_tumor": {
+          "rule": {
+            "value": 0.5866982922679627,
+            "tie_acceptance": 0.9097023864551925,
+            "below_mass": 0.7998609867991359,
+            "tied_mass": 0.0001528117359413203,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 9404,
+          "n_units": 4
+        },
+        "proportion_Fibroblast": {
+          "rule": {
+            "value": 0.8287749048428164,
+            "tie_acceptance": 0.3817693952342046,
+            "below_mass": 0.7761394127978622,
+            "tied_mass": 0.06250000000000001,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 345,
+          "n_units": 4
+        },
+        "proportion_Myeloid": {
+          "rule": {
+            "value": 0.795383025108515,
+            "tie_acceptance": 0.888449848023981,
+            "below_mass": 0.7994391099444293,
+            "tied_mass": 0.0006313131313131316,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 280,
+          "n_units": 4
+        },
+        "proportion_Perivascular": {
+          "rule": {
+            "value": 0.6591839805444843,
+            "tie_acceptance": 0.5998695067133512,
+            "below_mass": 0.7999460936819992,
+            "tied_mass": 8.986340762041698e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 6,
+          "n_units": 3
+        },
+        "proportion_T_NK_ILC": {
+          "rule": {
+            "value": 0.6591839805444843,
+            "tie_acceptance": 0.5998695067133512,
+            "below_mass": 0.7999460936819992,
+            "tied_mass": 8.986340762041698e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 23,
+          "n_units": 2
+        }
+      },
+      "calibration_constant": false
+    },
+    "novelty_raw": {
+      "pooled": {
+        "value": 0.4191476,
+        "tie_acceptance": 0.3055619005774694,
+        "below_mass": 0.7999752300664253,
+        "tied_mass": 8.106355382619975e-05,
+        "expected_calibration_coverage": 0.8
+      },
+      "conditional": {
+        "proportion_B_Plasma": {
+          "rule": {
+            "value": 0.73818713,
+            "tie_acceptance": 0.01756548536210767,
+            "below_mass": 0.7998605913860151,
+            "tied_mass": 0.007936507936507936,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 393,
+          "n_units": 3
+        },
+        "proportion_Endothelial": {
+          "rule": {
+            "value": 0.4191476,
+            "tie_acceptance": 0.3055619005774694,
+            "below_mass": 0.7999752300664253,
+            "tied_mass": 8.106355382619975e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 53,
+          "n_units": 3
+        },
+        "proportion_Epithelial_or_author_tumor": {
+          "rule": {
+            "value": 0.39454263,
+            "tie_acceptance": 0.36601452611682017,
+            "below_mass": 0.7999762328229795,
+            "tied_mass": 6.493506493506494e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 9404,
+          "n_units": 4
+        },
+        "proportion_Fibroblast": {
+          "rule": {
+            "value": 0.6575009,
+            "tie_acceptance": 0.8825655679522197,
+            "below_mass": 0.7983776368236173,
+            "tied_mass": 0.0018382352941176475,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 345,
+          "n_units": 4
+        },
+        "proportion_Myeloid": {
+          "rule": {
+            "value": 0.81608105,
+            "tie_acceptance": 0.4239898989898963,
+            "below_mass": 0.747001262626263,
+            "tied_mass": 0.12500000000000006,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 280,
+          "n_units": 4
+        },
+        "proportion_Perivascular": {
+          "rule": {
+            "value": 0.4191476,
+            "tie_acceptance": 0.3055619005774694,
+            "below_mass": 0.7999752300664253,
+            "tied_mass": 8.106355382619975e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 6,
+          "n_units": 3
+        },
+        "proportion_T_NK_ILC": {
+          "rule": {
+            "value": 0.4191476,
+            "tie_acceptance": 0.3055619005774694,
+            "below_mass": 0.7999752300664253,
+            "tied_mass": 8.106355382619975e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 23,
+          "n_units": 2
+        }
+      },
+      "calibration_constant": false
+    },
+    "disagreement_raw": {
+      "pooled": {
+        "value": 0.00060999126,
+        "tie_acceptance": 0.5708516917259895,
+        "below_mass": 0.7999633881675394,
+        "tied_mass": 6.413545407901489e-05,
+        "expected_calibration_coverage": 0.8
+      },
+      "conditional": {
+        "proportion_B_Plasma": {
+          "rule": {
+            "value": 0.0012766416,
+            "tie_acceptance": 0.2426120064675228,
+            "below_mass": 0.7996573276744809,
+            "tied_mass": 0.0014124293785310734,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 393,
+          "n_units": 3
+        },
+        "proportion_Endothelial": {
+          "rule": {
+            "value": 0.00060999126,
+            "tie_acceptance": 0.5708516917259895,
+            "below_mass": 0.7999633881675394,
+            "tied_mass": 6.413545407901489e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 53,
+          "n_units": 3
+        },
+        "proportion_Epithelial_or_author_tumor": {
+          "rule": {
+            "value": 0.0005358026,
+            "tie_acceptance": 0.49683484714874915,
+            "below_mass": 0.7999428136686063,
+            "tied_mass": 0.00011510128913443831,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 9404,
+          "n_units": 4
+        },
+        "proportion_Fibroblast": {
+          "rule": {
+            "value": 0.0022007818,
+            "tie_acceptance": 0.45647360740701515,
+            "below_mass": 0.7961960532716083,
+            "tied_mass": 0.008333333333333335,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 345,
+          "n_units": 4
+        },
+        "proportion_Myeloid": {
+          "rule": {
+            "value": 0.0038202864,
+            "tie_acceptance": 0.7930735930735888,
+            "below_mass": 0.7669552669552672,
+            "tied_mass": 0.04166666666666668,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 280,
+          "n_units": 4
+        },
+        "proportion_Perivascular": {
+          "rule": {
+            "value": 0.00060999126,
+            "tie_acceptance": 0.5708516917259895,
+            "below_mass": 0.7999633881675394,
+            "tied_mass": 6.413545407901489e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 6,
+          "n_units": 3
+        },
+        "proportion_T_NK_ILC": {
+          "rule": {
+            "value": 0.00060999126,
+            "tie_acceptance": 0.5708516917259895,
+            "below_mass": 0.7999633881675394,
+            "tied_mass": 6.413545407901489e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 23,
+          "n_units": 2
+        }
+      },
+      "calibration_constant": false
+    },
+    "composition_maxprob": {
+      "pooled": {
+        "value": 0.42611849999999996,
+        "tie_acceptance": 0.969354289090714,
+        "below_mass": 0.7999108393773832,
+        "tied_mass": 9.197939661515822e-05,
+        "expected_calibration_coverage": 0.8
+      },
+      "conditional": {
+        "proportion_B_Plasma": {
+          "rule": {
+            "value": 0.68453613,
+            "tie_acceptance": 0.025817555938125736,
+            "below_mass": 0.7999635345255112,
+            "tied_mass": 0.0014124293785310734,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 393,
+          "n_units": 3
+        },
+        "proportion_Endothelial": {
+          "rule": {
+            "value": 0.42611849999999996,
+            "tie_acceptance": 0.969354289090714,
+            "below_mass": 0.7999108393773832,
+            "tied_mass": 9.197939661515822e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 53,
+          "n_units": 3
+        },
+        "proportion_Epithelial_or_author_tumor": {
+          "rule": {
+            "value": 0.31749547,
+            "tie_acceptance": 0.8265257693856167,
+            "below_mass": 0.79987369716238,
+            "tied_mass": 0.0001528117359413203,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 9404,
+          "n_units": 4
+        },
+        "proportion_Fibroblast": {
+          "rule": {
+            "value": 0.68605065,
+            "tie_acceptance": 0.7485497090924226,
+            "below_mass": 0.7986239895053449,
+            "tied_mass": 0.0018382352941176475,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 345,
+          "n_units": 4
+        },
+        "proportion_Myeloid": {
+          "rule": {
+            "value": 0.695122,
+            "tie_acceptance": 0.690595928893799,
+            "below_mass": 0.7136755088882751,
+            "tied_mass": 0.12500000000000006,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": false,
+          "n_spots": 280,
+          "n_units": 4
+        },
+        "proportion_Perivascular": {
+          "rule": {
+            "value": 0.42611849999999996,
+            "tie_acceptance": 0.969354289090714,
+            "below_mass": 0.7999108393773832,
+            "tied_mass": 9.197939661515822e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 6,
+          "n_units": 3
+        },
+        "proportion_T_NK_ILC": {
+          "rule": {
+            "value": 0.42611849999999996,
+            "tie_acceptance": 0.969354289090714,
+            "below_mass": 0.7999108393773832,
+            "tied_mass": 9.197939661515822e-05,
+            "expected_calibration_coverage": 0.8
+          },
+          "fallback_to_pooled": true,
+          "n_spots": 23,
+          "n_units": 2
+        }
+      },
+      "calibration_constant": false
+    }
+  }
+}

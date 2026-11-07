@@ -1,0 +1,15 @@
+preparation,predicted_class,fallback_to_pooled,n_spots,n_units
+FFPE,proportion_B_Plasma,False,559,4
+FFPE,proportion_Endothelial,True,14,3
+FFPE,proportion_Epithelial_or_author_tumor,False,20858,4
+FFPE,proportion_Fibroblast,False,579,4
+FFPE,proportion_Myeloid,False,10424,4
+FFPE,proportion_Perivascular,False,763,4
+FFPE,proportion_T_NK_ILC,False,430,4
+frozen,proportion_B_Plasma,False,393,3
+frozen,proportion_Endothelial,True,53,3
+frozen,proportion_Epithelial_or_author_tumor,False,9404,4
+frozen,proportion_Fibroblast,False,345,4
+frozen,proportion_Myeloid,False,280,4
+frozen,proportion_Perivascular,True,6,3
+frozen,proportion_T_NK_ILC,True,23,2

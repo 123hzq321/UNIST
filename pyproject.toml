@@ -41,6 +41,7 @@ dependencies = [
 [project.optional-dependencies]
 study = [
   "anndata>=0.11,<0.12",
+  "matplotlib>=3.8",
   "requests>=2.31"
 ]
 dev = [

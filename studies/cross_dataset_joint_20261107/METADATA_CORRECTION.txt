@@ -1,0 +1,20 @@
+Source metadata correction after the original run
+
+The locked discovery code mistakenly assigned GSE210041 to fresh-frozen
+preparation and treated its patient identities as unresolved. The authoritative
+GEO SOFT file states FFPE extraction and explicitly identifies Patient 1 and
+Patient 7. The two corrected records are GSM6415705 and GSM6415706.
+
+The correction changes only preparation and analysis-unit metadata. Predictions,
+scores, thresholds, sample membership and TLS results are unchanged. Original
+RUN_LOCK.json, per-sample input audits and pre-correction tables are preserved
+locally. metadata_correction.json records source, table and prediction hashes.
+The discovery code now obtains identities from GEO characteristics and assigns
+FFPE. The original run script hash in RUN_LOCK.json predates this correction.
+
+As specified for this two-section source before inference, no population
+confidence interval is claimed. With two verified patients, report descriptive
+results only. Do not infer a treatment effect from one sample per status.
+
+Source:
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE210nnn/GSE210041/soft/GSE210041_family.soft.gz

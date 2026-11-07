@@ -1,0 +1,36 @@
+Spatial calibration candidate audit - 7 November 2026
+
+GSE175540
+Authoritative GEO records: 24; local sections: 24.
+Expression spots: 74,220; sections with matched TLS annotations: 23.
+Sections with explicit TLS/NO_TLS annotations: 20.
+Other files use a TLS column with T_AGG or unspecified values. They are not
+silently converted to binary TLS ground truth. One section has no annotation file.
+Feature coverage by preparation:
+                               sections  min_coverage  max_coverage
+preparation_from_author_title                                      
+FFPE                                 12        0.8560        0.8560
+frozen                               12        0.9995        0.9995
+
+No explicit patient/donor identity fields were found in the retrieved GEO
+sample characteristics. A section name is not a verified patient ID.
+Some author section names recur across preparation types (for example c_2);
+do not independently split such sections without checking primary clinical metadata.
+No patient split, new prediction, calibration fit or efficacy claim was produced.
+This is a candidate inspection, not an additional completed validation cohort.
+
+TNBC Zenodo 8135722 provenance warning
+The author README describes classifAll.RDS as classifications produced by
+regressors, with baseClassif.RDS used for gene-level rotation/scaling.
+These are not direct pathologist labels. For orthogonal validation, trace
+annotBySpot/artefacts annotations and the array-to-sample/patient mapping.
+Do not inherit the older local hard_gold ledger label without that check.
+
+Required next inputs
+1. Verified section-to-patient identities from the original study supplement.
+2. A genuinely independent development/calibration/test assignment by patient.
+3. Explicitly separate TLS biology controls from composition-error truth.
+4. Retain the previously observed 14 sections as audit/failure data, not tuning data.
+
+Source: https://ftp.ncbi.nlm.nih.gov/geo/series/GSE175nnn/GSE175540/soft/GSE175540_family.soft.gz
+TNBC author repository: https://zenodo.org/records/8135722
