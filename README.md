@@ -31,6 +31,16 @@ do not establish mapping accuracy or a successful biological rescue. No model
 weights or thresholds were adapted to these data. See the metadata correction
 record for verified identities and preparation of the two GSE210041 samples.
 
+The [spatial policy-transfer experiment](studies/spatial_policy_transfer_20261107/README.md)
+uses 16 of those sections for unlabeled, patient-balanced spatial calibration and
+tests the locked policies on 13 further gastric, RCC and CRC HD sections. This adds
+1,123,475 spots/bins, mostly from two HD sections, not new independent patients.
+Coverage transfer remains unreliable. Known RCC TLS diagnostics suggest class
+conditioning changes structure selection, but independent biological rescue has
+not been demonstrated. The mapper-exposure total is now 69 sections / 1,288,762
+spots from nine sources; calibration and reused diagnostic sections must not be
+counted as independent policy tests. Neural weights remain unchanged.
+
 The package is designed for a specific question: when a single-cell reference is mapped onto a spatial query, can the model flag regions or cohorts where the mapping should not be over-interpreted?
 
 UNIST is not intended to replace mature deconvolution tools such as RCTD, cell2location, Tangram or stereoscope. It provides a complementary uncertainty layer for cross-patient, cross-platform and cross-cancer spatial tumour microenvironment interpretation.

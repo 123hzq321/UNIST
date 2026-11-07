@@ -1,0 +1,13 @@
+{
+  "reason": "Normalize path to Path before progress logging in infer_h5; no numerical or policy change.",
+  "original_script_sha256": "0e7a50bcc5ed11f76eeca8f1d0731324bb18420cc1ae723d7ad58a9843f98548",
+  "resume_script_sha256": "864403237ac00a551943f9e1d324be7c6b8de1e0ca848f02fffbebed46935739",
+  "retried_samples": [
+    "GSM8594568",
+    "GSM8594569"
+  ],
+  "policy_sha256": "5fd9ac23875ca2f25385cba85e8a8c0fef000cf154a7fdab16abb57ed64f6c51",
+  "previous_completed_sections_not_rerun": 11,
+  "no_refit": true,
+  "original_failure_artifacts_preserved": true
+}

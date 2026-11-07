@@ -1,0 +1,69 @@
+{
+  "files": [
+    {
+      "name": "PROTOCOL.txt",
+      "sha256": "911609f76dcaa9db86d0ad9ba9ec7393eef88638b797b51189154b81b5656274"
+    },
+    {
+      "name": "REPORT.txt",
+      "sha256": "72a7b11964f77ec71f179b69f42f7ecafef4658e4f98e7d8d7e0594f7948b4ab"
+    },
+    {
+      "name": "COMPLETE.json",
+      "sha256": "77c53a13324cab3b00ae16c8b86740976033c6c34fddaa4b3ab1442a08e52547"
+    },
+    {
+      "name": "fitted_policies.json",
+      "sha256": "5fd9ac23875ca2f25385cba85e8a8c0fef000cf154a7fdab16abb57ed64f6c51"
+    },
+    {
+      "name": "new_source_inventory.csv",
+      "sha256": "44e27aed300f41144f529b6ad381f5905d06c13cd6e664cf37d92ee91db9caf5"
+    },
+    {
+      "name": "section_policy_metrics.csv",
+      "sha256": "4eb6f23d39d79dd0b3d7f27acb7813ea4d0a1595e1af2317ab6e62f941089ae2"
+    },
+    {
+      "name": "retrospective_tls_metrics.csv",
+      "sha256": "0d0672d0d0e4c1472945b9a1d5dd4bd45b9337c0c6b440765d4a1e6aed26afce"
+    },
+    {
+      "name": "coverage_summary.csv",
+      "sha256": "0eb2788d07060223acb9b85a14e592a98391f74cee31908ff1d83da38a0e9c7b"
+    },
+    {
+      "name": "calibration_patient_summary.csv",
+      "sha256": "40b78062bbdde192b9888321adde406d8620e300c730aa793bdfed862c7c3901"
+    },
+    {
+      "name": "retrospective_tls_summary.csv",
+      "sha256": "37a3d407c2bfe6c171ea6cedf07dc5cf66b5fb35b481adce50ab1a39dd8fdd40"
+    },
+    {
+      "name": "conditional_calibration_support.csv",
+      "sha256": "e1ed51074044663575e63ce7ef329ec1d2fe1a9a4e4d4a9fbe4f3366a6b2f224"
+    },
+    {
+      "name": "run_provenance_public.json",
+      "sha256": "22d62302b1b13d46844acbc0e48e15df86d0c6ebc5182050a90efbf580c2e068"
+    },
+    {
+      "name": "resume_record.json",
+      "sha256": "761c968b9c2bdc9d9bda30c66e8d5c1c356e90116add20e18d3c13054eefffdb"
+    },
+    {
+      "name": "original_prediction_replay.json",
+      "sha256": "f61918d9ae423b0e880446608dd3901cc5300ce3cfc2b6c9c2b8313136b1a093"
+    },
+    {
+      "name": "spatial_policy_transfer.png",
+      "sha256": "fb6ae3a8516134e67d7efa43d371a62149d28edad591f9739b6de075e8fae6d7"
+    },
+    {
+      "name": "spatial_policy_transfer.svg",
+      "sha256": "e676833408f6a19889142f51e2c7acada33bc632aabd5a2ba003c51dd63becf4"
+    }
+  ],
+  "no_raw_data_or_per_spot_predictions_or_mapper_weights": true
+}

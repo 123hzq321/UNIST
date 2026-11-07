@@ -1,0 +1,288 @@
+{
+  "started_utc": "2026-11-07T01:50:37.564875+00:00",
+  "protocol_sha256": "911609f76dcaa9db86d0ad9ba9ec7393eef88638b797b51189154b81b5656274",
+  "script_sha256": "0e7a50bcc5ed11f76eeca8f1d0731324bb18420cc1ae723d7ad58a9843f98548",
+  "policy_sha256": "5fd9ac23875ca2f25385cba85e8a8c0fef000cf154a7fdab16abb57ed64f6c51",
+  "sources": {
+    "GSE251950": {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE251nnn/GSE251950/soft/GSE251950_family.soft.gz",
+      "sha256": "d130b3751d6fd38dafe4190ecc030eaa38e5c88b564f3d1819b9aaa472af4a20",
+      "bytes": 2223,
+      "overall_design": "Spatial transcriptomics of human gastric cancers were profiled."
+    },
+    "GSE250163": {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE250nnn/GSE250163/soft/GSE250163_family.soft.gz",
+      "sha256": "792e04ca93b5686676ce9abf417f04a9877f48625bf91d8c0cd099679eaacb2b",
+      "bytes": 3131,
+      "overall_design": "We have analyzed 5 spatial transcriptomic tissue sections from simple stage-3 clear cell Renal Cell Carcinoma tumors. FFPE tumor sections were placed on Visium gene expression slide and stained for morphological context using H&E. Spatial transcriptomics was performed by 10x Genomics Visium Certified Service Providers. ccRCC tissues were obtained from UC Tumor Bank. The results were processed by spaceRanger software to acquire expression matrix of each sample.\nSpatial transcriptomics images and expression files."
+    },
+    "GSE280318": {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE280nnn/GSE280318/soft/GSE280318_family.soft.gz",
+      "sha256": "ab910eebc0c6b616887df03c5ad1c7a9aa399668161dfb4d9d4bb6fd4936797c",
+      "bytes": 8590,
+      "overall_design": "Refer to individual Series"
+    }
+  },
+  "calibration_studies": [
+    "GSE210616",
+    "GSE300676"
+  ],
+  "test_studies": [
+    "GSE251950",
+    "GSE250163",
+    "GSE280318"
+  ],
+  "test_patients_verified": false,
+  "new_cancer_categories": [
+    "gastric",
+    "colorectal"
+  ],
+  "no_mapper_retraining": true,
+  "no_risk_or_conformal_guarantee": true,
+  "retrospective_tls_diagnostic": "GSE175540; known preceding outcomes; no fitting to TLS labels",
+  "model_integrity": [
+    {
+      "file": "ensemble_member_0.pt",
+      "sha256": "79f232f6f23a4f9a293e2276e9dc65d953e4431617e67fc4d05aa7ffa9fab218"
+    },
+    {
+      "file": "ensemble_member_1.pt",
+      "sha256": "3b8d622cae1edb2b9a3d4580a9611d15751652892bded0615060d60422fd7e03"
+    },
+    {
+      "file": "ensemble_member_2.pt",
+      "sha256": "9853d6f3d2ae3e3601698b2e76a03838c520ce623431a0094f323348b072a3fd"
+    },
+    {
+      "file": "selected_genes.json",
+      "sha256": "28501188843315de55ef7cca0c71ba238aa18713c45f298063fba5e165044b62"
+    },
+    {
+      "file": "common_genes.json",
+      "sha256": "03b597c8d5dbf69c4e4af80267f94f44fc513b3f599c3ac8a5a9066616eac4c9"
+    },
+    {
+      "file": "READY.json",
+      "sha256": "fd45e70dad792ec94ba765d8d4efee09374b027d397dab46ab793f9410c33359"
+    },
+    {
+      "file": "train_class_centroids_log1p.npy",
+      "sha256": "07368ca1eae5e995103d2ed316273ffc005389ddec57b32303b274712dde7d1b"
+    },
+    {
+      "file": "synthetic_within_donor_mixtures_frozen_calibration.json",
+      "sha256": "feba7aacdfd5a36c5b070812ce6fb2b2b77843ef71694c26798598cfefc2bd31"
+    }
+  ],
+  "calibration_prediction_hashes": [
+    {
+      "sample_id": "GSM6433585",
+      "sha256": "07dbe6cefe028fa119a43c51e55a223a39d1493f480f9775f4d73725e4271786"
+    },
+    {
+      "sample_id": "GSM6433586",
+      "sha256": "e07bcd9f8a077bb17f3d78bfa3a8d7b1cf0227d21060bc400fef00ceb8921b8a"
+    },
+    {
+      "sample_id": "GSM6433593",
+      "sha256": "24a9c006572672e2c56f321998ffca7061ed282d265b0ba0460c37230d5e02ba"
+    },
+    {
+      "sample_id": "GSM6433594",
+      "sha256": "6aebe54fa9eaac0aca0051ca5bc69f296e4215fb60fdf979e32c6ce5361c4a7b"
+    },
+    {
+      "sample_id": "GSM6433599",
+      "sha256": "81ac49ab3499626cc039bc8d83e7fda9435afcabee02b73ca0cf44156cf382e7"
+    },
+    {
+      "sample_id": "GSM6433600",
+      "sha256": "30ed12096694fb64ba35b95dd6e8ac1c972a38a818dbe1b38511e437ea3aa938"
+    },
+    {
+      "sample_id": "GSM6433611",
+      "sha256": "f36da3f60a3982ca2f693f1d6cd9fe82a26e3d5d3404892b20da0d2d62df75c6"
+    },
+    {
+      "sample_id": "GSM6433612",
+      "sha256": "0b3dd1b7d48b7ba71c60078bd4d4e9f1a234d74218fb966c80f8174c129b37aa"
+    },
+    {
+      "sample_id": "GSM9066288",
+      "sha256": "58745c92a679cf36e8242c9903fe2be570a41ec5024a3971960a3af834e911d2"
+    },
+    {
+      "sample_id": "GSM9066289",
+      "sha256": "8f4b2dbf9a5e8111a1fc15335c05cf14f05f7ab087d139ac90427828acce7e1b"
+    },
+    {
+      "sample_id": "GSM9066290",
+      "sha256": "9a44c29f3978e82612f67dc33c7a4e31bdbe0b5db708aef436ced6bee78e8d90"
+    },
+    {
+      "sample_id": "GSM9066291",
+      "sha256": "25f26d643cc55f4ec2af23ba751802c3e83d76d71c1f530fb8a5a528036e36cb"
+    },
+    {
+      "sample_id": "GSM9066292",
+      "sha256": "eefbfe63ee7432b59f24ae89ede318e545d7c1f657d9701f70cd4c4a913187d1"
+    },
+    {
+      "sample_id": "GSM9066293",
+      "sha256": "a5e1f802dd31bde1e5621c558a658575f60acc1b032bc0a62003a9d85d38e03d"
+    },
+    {
+      "sample_id": "GSM9066294",
+      "sha256": "7f7fcdce849dc3b857665fbbd18aaf3b0e7d5b6161c96abfc54f99cc7ceb56f1"
+    },
+    {
+      "sample_id": "GSM9066295",
+      "sha256": "1a5fdad16b1699d2abe3b98c8a9d246703fe95b86c085dde910d610b24107bd4"
+    }
+  ],
+  "test_samples": [
+    {
+      "cohort": "GSE251950",
+      "sample_id": "GSM7990473",
+      "source_title": "GC1",
+      "preparation": "frozen",
+      "cancer": "gastric",
+      "analysis_unit": "GSM7990473",
+      "identity": "section_descriptive_no_patient_inference",
+      "matrix_sha256": "31956fe07793959293fb56fab5d9bf99fb7306bb52f04aaccaf3293995a3adee",
+      "relation": "new_joint_model_test_legacy_model_exposed_no_exact_truth"
+    },
+    {
+      "cohort": "GSE251950",
+      "sample_id": "GSM7990474",
+      "source_title": "GC2",
+      "preparation": "frozen",
+      "cancer": "gastric",
+      "analysis_unit": "GSM7990474",
+      "identity": "section_descriptive_no_patient_inference",
+      "matrix_sha256": "689dd8328084cb62aeb9078a99e4214f12eec56e064555480bf792abe6dce0ab",
+      "relation": "new_joint_model_test_legacy_model_exposed_no_exact_truth"
+    },
+    {
+      "cohort": "GSE251950",
+      "sample_id": "GSM7990475",
+      "source_title": "GC3",
+      "preparation": "frozen",
+      "cancer": "gastric",
+      "analysis_unit": "GSM7990475",
+      "identity": "section_descriptive_no_patient_inference",
+      "matrix_sha256": "d191733514ed1bb5868dd7b9f1aa7eb63cf4e4721a116e1c2bf497d0e8da9639",
+      "relation": "new_joint_model_test_legacy_model_exposed_no_exact_truth"
+    },
+    {
+      "cohort": "GSE251950",
+      "sample_id": "GSM7990476",
+      "source_title": "GC4",
+      "preparation": "frozen",
+      "cancer": "gastric",
+      "analysis_unit": "GSM7990476",
+      "identity": "section_descriptive_no_patient_inference",
+      "matrix_sha256": "ec9e1bed13e1c74fdb0b55edc6713aff6e9e4a93e5f58ab6fe374c5d8affbadf",
+      "relation": "new_joint_model_test_legacy_model_exposed_no_exact_truth"
+    },
+    {
+      "cohort": "GSE251950",
+      "sample_id": "GSM7990477",
+      "source_title": "GC5",
+      "preparation": "frozen",
+      "cancer": "gastric",
+      "analysis_unit": "GSM7990477",
+      "identity": "section_descriptive_no_patient_inference",
+      "matrix_sha256": "d54e71d7b1c7efae0a33781772efedde9943cea73191fedec328625073d7809e",
+      "relation": "new_joint_model_test_legacy_model_exposed_no_exact_truth"
+    },
+    {
+      "cohort": "GSE251950",
+      "sample_id": "GSM7990478",
+      "source_title": "GC6",
+      "preparation": "frozen",
+      "cancer": "gastric",
+      "analysis_unit": "GSM7990478",
+      "identity": "section_descriptive_no_patient_inference",
+      "matrix_sha256": "2d5d9da97f441c0cfb13b25aa353567f075c0462a662494e9f852794092dd594",
+      "relation": "new_joint_model_test_legacy_model_exposed_no_exact_truth"
+    },
+    {
+      "cohort": "GSE251950",
+      "sample_id": "GSM7990479",
+      "source_title": "GC6-PM",
+      "preparation": "frozen",
+      "cancer": "gastric",
+      "analysis_unit": "GSM7990479",
+      "identity": "section_descriptive_no_patient_inference",
+      "matrix_sha256": "64c03b0f3c99335e1e2ff7624cf4a4486314ff44966d1d6284ca9939747253f9",
+      "relation": "new_joint_model_test_legacy_model_exposed_no_exact_truth"
+    },
+    {
+      "cohort": "GSE251950",
+      "sample_id": "GSM7990480",
+      "source_title": "GC7",
+      "preparation": "frozen",
+      "cancer": "gastric",
+      "analysis_unit": "GSM7990480",
+      "identity": "section_descriptive_no_patient_inference",
+      "matrix_sha256": "e7583598204c858f3aeb18a00a407ad8155607e34e660a76ad9ceae800e6d04b",
+      "relation": "new_joint_model_test_legacy_model_exposed_no_exact_truth"
+    },
+    {
+      "cohort": "GSE251950",
+      "sample_id": "GSM7990481",
+      "source_title": "GC8",
+      "preparation": "frozen",
+      "cancer": "gastric",
+      "analysis_unit": "GSM7990481",
+      "identity": "section_descriptive_no_patient_inference",
+      "matrix_sha256": "b0624f6b2e2c7af8bbf36b6abd280e1e7b56b7f510e4118f7a34e0ba663a0d8d",
+      "relation": "new_joint_model_test_legacy_model_exposed_no_exact_truth"
+    },
+    {
+      "cohort": "GSE251950",
+      "sample_id": "GSM7990482",
+      "source_title": "GC9",
+      "preparation": "frozen",
+      "cancer": "gastric",
+      "analysis_unit": "GSM7990482",
+      "identity": "section_descriptive_no_patient_inference",
+      "matrix_sha256": "c08bd45aa901e6630396948199f1162a268dfa9c23097683b0edfa3ff0f7bd29",
+      "relation": "new_joint_model_test_legacy_model_exposed_no_exact_truth"
+    },
+    {
+      "cohort": "GSE250163",
+      "sample_id": "GSM7974888",
+      "source_title": "S2-D ccRCC stage-III tissue",
+      "preparation": "FFPE",
+      "cancer": "renal",
+      "analysis_unit": "GSM7974888",
+      "identity": "section_descriptive_no_patient_inference",
+      "matrix_sha256": "68d50a55a422901869d9bc7447b8da66f666a7dbc8476c072b53d1eb40a3face",
+      "relation": "new_joint_model_test_legacy_model_exposed_no_exact_truth"
+    },
+    {
+      "cohort": "GSE280318",
+      "sample_id": "GSM8594569",
+      "source_title": "P5 Human Colon Cancer",
+      "preparation": "FFPE",
+      "cancer": "colorectal",
+      "analysis_unit": "GSM8594569",
+      "identity": "section_descriptive_no_patient_inference",
+      "matrix_sha256": "ee19eeeb56772ae6a83a06c8e7ca4d3ae00e3503de74680210fe6fe6e295023b",
+      "relation": "new_joint_model_test_legacy_model_exposed_no_exact_truth"
+    },
+    {
+      "cohort": "GSE280318",
+      "sample_id": "GSM8594568",
+      "source_title": "P2 Human Colon Cancer.",
+      "preparation": "FFPE",
+      "cancer": "colorectal",
+      "analysis_unit": "GSM8594568",
+      "identity": "section_descriptive_no_patient_inference",
+      "matrix_sha256": "445f02025d60a0aaa5bb2a0d9e4f5a476741d71a73c7d99c2397169cfba11b73",
+      "relation": "new_joint_model_test_legacy_model_exposed_no_exact_truth"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "n_cells": 32,
+  "max_abs_probability_difference": 4.307366907596588e-09,
+  "tolerance": 1e-05,
+  "passed": true,
+  "purpose": "technical replay, not new validation"
+}
